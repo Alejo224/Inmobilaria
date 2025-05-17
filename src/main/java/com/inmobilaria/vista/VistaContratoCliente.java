@@ -1,8 +1,8 @@
-package vista;
+package com.inmobilaria.vista;
 
 import javax.swing.*;
 
-public class contratoCliente extends JDialog {
+public class VistaContratoCliente extends JDialog {
     private JPanel contentPane;
     private JButton buttonOK;
     private JButton buttonCancel;
@@ -14,9 +14,10 @@ public class contratoCliente extends JDialog {
     private JTextField txtfechaExpedi;
     private JTextField txtfechaCreacion;
     private JTextField txtDescripcion;
+    private JTextField txtValor;
 
 
-    public contratoCliente() {
+    public VistaContratoCliente() {
         setContentPane(contentPane);
         setModal(true);
 
@@ -24,7 +25,7 @@ public class contratoCliente extends JDialog {
 
 
     public static void main(String[] args) {
-        contratoCliente dialog = new contratoCliente();
+        VistaContratoCliente dialog = new VistaContratoCliente();
         dialog.pack();
         dialog.setVisible(true);
         System.exit(0);
