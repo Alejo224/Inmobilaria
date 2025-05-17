@@ -88,6 +88,13 @@ git pull origin main
 ```bash
 git checkout -b nueva-rama
 ```
+## Buenas prácticas del proyecto
+
+- Nombrar clases en mayúscula: Cliente, Producto, Agente.
+- Nombrar variables con camelCase: nombreCliente, cedulaAgente.
+- Probar el código antes de hacer commit.
+- Evitar subir archivos innecesarios como `.idea/` o `.class`.
+- Creacion de carpetas. path: src/main/com/inmobilaria
 
 ---
 
