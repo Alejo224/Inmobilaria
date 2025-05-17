@@ -5,14 +5,15 @@ import java.util.List;
 
 public class AgenteComercial extends Persona{
     private String password, loguin;
-    private Persona cliente;
+    private ArrayList<Persona> cliente;
 
     public AgenteComercial(int cedula, String nombres,String apellidos, int fechaNacimiento, int fechaExpedicion, String correoElectronico, int telefono,
                            String password, String loguin) {
         super(cedula, nombres, fechaNacimiento, fechaExpedicion, correoElectronico, telefono, apellidos);
         this.password = password;
         this.loguin = loguin;
-        this.cliente = new Persona(0,"",0 ,0,"",0,"");
+
+        cliente = new ArrayList<>();
     }
 
     public String getPassword() {
@@ -33,13 +34,25 @@ public class AgenteComercial extends Persona{
 
     //Este metodo nos sirve para poder registrar un cliente
     public void registrarCliente(int cedula, String nombres, int fechaNacimiento, int fechaExpedicion, String correoElectronico, int telefono, String apellidos){
-        cliente.setCedula(cedula);
-        cliente.setNombre(nombres);
-        cliente.setApellidos(apellidos);
-        cliente.setTelefono(telefono);
-        cliente.setCorreoElectronico(correoElectronico);
-        cliente.setFechaExpedicion(fechaExpedicion);
-        cliente.setFechaNacimiento(fechaNacimiento);
+
+        cliente.add(new Persona(cedula,nombres,fechaNacimiento,fechaExpedicion,correoElectronico,telefono,apellidos));
+    }
+    public  boolean mostarCliente(){
+        for (int i = 0; i < cliente.size(); i++) {
+            System.out.println(
+                    " Nombre = " + cliente.get(i).getNombre() +
+                   "\n Apellidos = " + cliente.get(i).getApellidos()+ "\n Fecha nacimento = " + cliente.get(i).getFechaNacimiento() +
+                    "\n Fecha expedicion = " + cliente.get(i).getFechaExpedicion()+
+                    "\n Correo = " + cliente.get(i).getCorreoElectronico() +
+                    "\n Telefono = " + cliente.get(i).getTelefono());
+            return true;
+        }
+       return false;
+    }
+    public void borrarcliente(int index){
+
+    }
+    public void modificarCliente(){
 
     }
     public void registarContratocliente(){
@@ -49,14 +62,4 @@ public class AgenteComercial extends Persona{
 
     }
 
-    @Override
-    public String toString() {
-        return " nombre = " + cliente.getNombre()+
-                "\n Apellidos = " + cliente.getApellidos()+
-                "\n cedula = " + cliente.getCedula()+
-                "\n correo = " + cliente.getCorreoElectronico()+
-                "\n telefono = " + cliente.getTelefono() +
-                "\n fecha nacimiento = " + cliente.getFechaNacimiento() +
-                "\n fecha Expedicion = " + cliente.getFechaExpedicion();
-    }
 }
