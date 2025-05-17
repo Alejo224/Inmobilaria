@@ -1,6 +1,6 @@
 package com.inmobilaria;
 
-import vista.AgenteComercial;
+import com.inmobilaria.vista.VistaAgenteComercial;
 
 import javax.swing.*;
 
@@ -9,8 +9,8 @@ import javax.swing.*;
 public class Main {
     public static void main(String[] args) {
         JFrame frame = new JFrame("Inbomiliaria S.A");
-        AgenteComercial agenteComercial = new AgenteComercial();
-        frame.add(agenteComercial.getVentana());
+        VistaAgenteComercial vistaAgenteComercial = new VistaAgenteComercial();
+        frame.add(vistaAgenteComercial.getVentana());
         frame.setSize(550,375);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
