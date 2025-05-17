@@ -11,7 +11,7 @@ public class Main {
         JFrame frame = new JFrame("Inbomiliaria S.A");
         AgenteComercial agenteComercial = new AgenteComercial();
         frame.add(agenteComercial.getVentana());
-        frame.setSize(550,375);
+        frame.setSize(350,285);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

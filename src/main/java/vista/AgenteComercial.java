@@ -21,6 +21,25 @@ public class AgenteComercial {
                 Registro.setVisible(true);
             }
         });
+        contratoPropietarioInmobliariaButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                contratoPropietario propietario = new contratoPropietario();
+                propietario.setSize(500,250);
+                propietario.setLocationRelativeTo(null);
+                propietario.setVisible(true);
+            }
+        });
+        contratoClienteInmbiliariaButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                contratoCliente clientes = new contratoCliente();
+                clientes.setSize(550,350);
+                clientes.setLocationRelativeTo(null);
+                clientes.setVisible(true);
+            }
+        });
+
     }
     public JPanel getVentana() {
         return ventanaAgente;
