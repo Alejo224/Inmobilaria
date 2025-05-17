@@ -1,28 +1,25 @@
-package vista;
+package com.inmobilaria.vista;
 
 import javax.swing.*;
 import java.awt.event.*;
 
-public class vistaRegistro extends JDialog {
+public class VistaContratoPropietario extends JDialog {
     private JPanel contentPane;
-    private JButton btnRegistrar;
+    private JButton buttonOK;
     private JButton buttonCancel;
-    private JTextField textDireccion;
-    private JTextField txtTelefono2;
-    private JTextField txtTelefono1;
-    private JTextField txtCorreo;
-    private JTextField txtFechaExp;
-    private JTextField txtFechaNacimento;
-    private JTextField txtCedula;
-    private JTextField txtNombres;
-    private JTextField txtApellidos;
+    private JRadioButton ventaRadioButton;
+    private JRadioButton alquilerRadioButton;
+    private JTextField txtCodigo;
+    private JTextField txtDescipcion;
+    private JTextField txtFechaCreacion;
+    private JTextField txtFechaExpedicion;
 
-    public vistaRegistro() {
+    public VistaContratoPropietario() {
         setContentPane(contentPane);
         setModal(true);
-        getRootPane().setDefaultButton(btnRegistrar);
+        getRootPane().setDefaultButton(buttonOK);
 
-        btnRegistrar.addActionListener(new ActionListener() {
+        buttonOK.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 onOK();
             }
@@ -61,7 +58,7 @@ public class vistaRegistro extends JDialog {
     }
 
     public static void main(String[] args) {
-        vistaRegistro dialog = new vistaRegistro();
+        VistaContratoPropietario dialog = new VistaContratoPropietario();
         dialog.pack();
         dialog.setVisible(true);
         System.exit(0);
