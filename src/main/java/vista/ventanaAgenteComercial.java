@@ -4,13 +4,13 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class AgenteComercial {
+public class ventanaAgenteComercial {
     private JButton registrarClienteButton;
     private JPanel ventanaAgente;
     private JButton contratoPropietarioInmobliariaButton;
     private JButton contratoClienteInmbiliariaButton;
 
-    public AgenteComercial() {
+    public ventanaAgenteComercial() {
         registrarClienteButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
