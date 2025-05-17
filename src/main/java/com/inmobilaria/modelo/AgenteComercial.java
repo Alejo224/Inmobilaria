@@ -31,6 +31,7 @@ public class AgenteComercial extends Persona{
         this.loguin = loguin;
     }
 
+    //Este metodo nos sirve para poder registrar un cliente
     public void registrarCliente(int cedula, String nombres, int fechaNacimiento, int fechaExpedicion, String correoElectronico, int telefono, String apellidos){
         cliente.setCedula(cedula);
         cliente.setNombre(nombres);

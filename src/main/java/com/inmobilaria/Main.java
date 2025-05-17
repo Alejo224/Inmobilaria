@@ -18,6 +18,7 @@ public class Main {
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+        //esto es de practica para saber si el metodo funciona correctamente
         comercial.registrarCliente(111,"Kevin",15,02/45,"kevon@",315222,"zuluaga");
         System.out.println(comercial.toString());
     }
