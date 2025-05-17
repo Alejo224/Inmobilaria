@@ -1,9 +1,9 @@
-package vista;
+package com.inmobilaria.vista;
 
 import javax.swing.*;
 import java.awt.event.*;
 
-public class vistaRegistro extends JDialog {
+public class VistaRegistro extends JDialog {
     private JPanel contentPane;
     private JButton btnRegistrar;
     private JButton buttonCancel;
@@ -17,7 +17,7 @@ public class vistaRegistro extends JDialog {
     private JTextField txtNombres;
     private JTextField txtApellidos;
 
-    public vistaRegistro() {
+    public VistaRegistro() {
         setContentPane(contentPane);
         setModal(true);
         getRootPane().setDefaultButton(btnRegistrar);
@@ -61,7 +61,7 @@ public class vistaRegistro extends JDialog {
     }
 
     public static void main(String[] args) {
-        vistaRegistro dialog = new vistaRegistro();
+        VistaRegistro dialog = new VistaRegistro();
         dialog.pack();
         dialog.setVisible(true);
         System.exit(0);
