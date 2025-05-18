@@ -1,7 +1,7 @@
 package com.inmobilaria;
 
 import com.inmobilaria.modelo.AgenteComercial;
-import com.inmobilaria.vista.VistaAgenteComercial;
+import com.inmobilaria.vista.VistaLoguin;
 
 import javax.swing.*;
 import java.util.Scanner;
@@ -10,14 +10,17 @@ import java.util.Scanner;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
+
+        //Creamos la ventana del loguin
         AgenteComercial comercial = new AgenteComercial(155,"Pedro","zapata",15/225,155,"pedro@gg",351,"carnalito","122");
         JFrame frame = new JFrame("Inbomiliaria S.A");
-        VistaAgenteComercial agenteComercial = new VistaAgenteComercial();
-        frame.add(agenteComercial.getVentana());
-        frame.setSize(350,285);
+        VistaLoguin loguin = new VistaLoguin();
+        frame.add(loguin.getVentana());
+        frame.setSize(291,177);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
 
 
         //esto es de practica para saber si el metodo funciona correctamente
