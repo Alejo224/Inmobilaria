@@ -4,6 +4,10 @@
  */
 package com.inmobilaria.vista;
 
+import com.inmobilaria.controlador.ContratoClienteCtrl;
+
+import javax.swing.*;
+
 /**
  *
  * @author Charly Cimino
@@ -13,7 +17,9 @@ public class VistaContratoCliente extends javax.swing.JFrame {
     /*
      * Creates new form VistaContratoCliente
      */
+    private ContratoClienteCtrl contratoClienteCtrl;
     public VistaContratoCliente() {
+        contratoClienteCtrl = new ContratoClienteCtrl(this);
         initComponents();
     }
 
@@ -108,10 +114,12 @@ public class VistaContratoCliente extends javax.swing.JFrame {
         jRadioButton1.setText("Alquiler");
 
         jLabel14.setText("Tipo de contrato");
-
+        //agregando accionador a los botones
         buttonSalir.setText("Salir");
+        buttonSalir.addActionListener(contratoClienteCtrl);
 
         buttonGuardar.setText("Guardar");
+        buttonGuardar.addActionListener(contratoClienteCtrl);
 
         javax.swing.GroupLayout jPanelRegistroLayout = new javax.swing.GroupLayout(jPanelRegistro);
         jPanelRegistro.setLayout(jPanelRegistroLayout);
@@ -278,8 +286,16 @@ public class VistaContratoCliente extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     /**
-     * @param args the command line arguments
+     *  GETTERS AND SETTERS
      */
+    public JButton getButtonGuardar() {
+        return buttonGuardar;
+    }
+
+    public JButton getButtonSalir() {
+        return buttonSalir;
+    }
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

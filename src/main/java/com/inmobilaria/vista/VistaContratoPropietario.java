@@ -4,6 +4,11 @@
  */
 package com.inmobilaria.vista;
 
+import com.inmobilaria.controlador.ContratoClienteCtrl;
+import com.inmobilaria.controlador.ContratoPropietarioCtrl;
+
+import javax.swing.*;
+
 /**
  *
  * @author Charly Cimino
@@ -13,7 +18,9 @@ public class VistaContratoPropietario extends javax.swing.JFrame {
     /**
      * Creates new form VistaContratoPropietario
      */
+    private ContratoPropietarioCtrl contratoPropietarioCtrl;
     public VistaContratoPropietario() {
+        contratoPropietarioCtrl = new ContratoPropietarioCtrl(this);
         initComponents();
     }
 
@@ -97,10 +104,12 @@ public class VistaContratoPropietario extends javax.swing.JFrame {
         jLabel4.setText("Fecha creación");
 
         jLabel5.setText("Fecha de expedición");
-
+        //agregando accionador para el controlador
         buttonSalir.setText("Salir");
+        buttonSalir.addActionListener(contratoPropietarioCtrl);
 
         buttonGuardar.setText("Guardar");
+        buttonSalir.addActionListener(contratoPropietarioCtrl);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -237,8 +246,16 @@ public class VistaContratoPropietario extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtValorActionPerformed
 
+    public JButton getButtonSalir() {
+        return buttonSalir;
+    }
+
+    public JButton getButtonGuardar() {
+        return buttonGuardar;
+    }
+
     /**
-     * @param args the command line arguments
+     * @param args GETTERS AND SETTERS
      */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
