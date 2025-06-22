@@ -4,8 +4,6 @@
  */
 package com.inmobilaria.vista;
 
-import com.inmobilaria.controlador.ContratoClienteCtrl;
-
 import javax.swing.*;
 
 /**
@@ -17,9 +15,8 @@ public class VistaContratoCliente extends javax.swing.JFrame {
     /*
      * Creates new form VistaContratoCliente
      */
-    private ContratoClienteCtrl contratoClienteCtrl;
     public VistaContratoCliente() {
-        contratoClienteCtrl = new ContratoClienteCtrl(this);
+
         initComponents();
     }
 
@@ -116,10 +113,8 @@ public class VistaContratoCliente extends javax.swing.JFrame {
         jLabel14.setText("Tipo de contrato");
         //agregando accionador a los botones
         buttonSalir.setText("Salir");
-        buttonSalir.addActionListener(contratoClienteCtrl);
 
         buttonGuardar.setText("Guardar");
-        buttonGuardar.addActionListener(contratoClienteCtrl);
 
         javax.swing.GroupLayout jPanelRegistroLayout = new javax.swing.GroupLayout(jPanelRegistro);
         jPanelRegistro.setLayout(jPanelRegistroLayout);
