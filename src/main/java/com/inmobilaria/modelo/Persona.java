@@ -1,72 +1,77 @@
 package com.inmobilaria.modelo;
 
-public class Persona {
-    private int cedula, fechaNacimiento, fechaExpedicion, telefono;
-    private String nombres, apellidos, correoElectronico;
+import java.util.Date;
 
-    public Persona(int cedula, String nombres, int fechaNacimiento, int fechaExpedicion, String correoElectronico, int telefono, String apellidos) {
+public class Persona {
+
+    private String cedula, correo, direccion, nombreCompleto, telefono1;
+    private Date fechaNacimiento, fechaExpediccion;
+
+    public Persona(){}
+
+    public Persona(String cedula, String correo, String direccion, String nombreCompleto, String telefono1, Date fechaNacimiento, Date fechaExpediccion) {
         this.cedula = cedula;
-        this.nombres = nombres;
+        this.correo = correo;
+        this.direccion = direccion;
+        this.nombreCompleto = nombreCompleto;
+        this.telefono1 = telefono1;
         this.fechaNacimiento = fechaNacimiento;
-        this.fechaExpedicion = fechaExpedicion;
-        this.correoElectronico = correoElectronico;
-        this.telefono = telefono;
-        this.apellidos = apellidos;
+        this.fechaExpediccion = fechaExpediccion;
     }
 
-    public int getCedula() {
+    public String getCedula() {
         return cedula;
     }
 
-    public void setCedula(int cedula) {
+    public void setCedula(String cedula) {
         this.cedula = cedula;
     }
 
-    public String getNombre() {
-        return nombres;
+    public String getCorreo() {
+        return correo;
     }
 
-    public void setNombre(String nombre) {
-        this.nombres = nombre;
+    public void setCorreo(String correo) {
+        this.correo = correo;
     }
 
-    public int getFechaNacimiento() {
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+
+    public String getNombreCompleto() {
+        return nombreCompleto;
+    }
+
+    public void setNombreCompleto(String nombreCompleto) {
+        this.nombreCompleto = nombreCompleto;
+    }
+
+    public String getTelefono1() {
+        return telefono1;
+    }
+
+    public void setTelefono1(String telefono1) {
+        this.telefono1 = telefono1;
+    }
+
+    public Date getFechaNacimiento() {
         return fechaNacimiento;
     }
 
-    public void setFechaNacimiento(int fechaNacimiento) {
+    public void setFechaNacimiento(Date fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
     }
 
-    public int getFechaExpedicion() {
-        return fechaExpedicion;
+    public Date getFechaExpediccion() {
+        return fechaExpediccion;
     }
 
-    public void setFechaExpedicion(int fechaExpedicion) {
-        this.fechaExpedicion = fechaExpedicion;
-    }
-
-    public String getCorreoElectronico() {
-        return correoElectronico;
-    }
-
-    public void setCorreoElectronico(String correoElectronico) {
-        this.correoElectronico = correoElectronico;
-    }
-
-    public int getTelefono() {
-        return telefono;
-    }
-
-    public void setTelefono(int telefono) {
-        this.telefono = telefono;
-    }
-
-    public String getApellidos() {
-        return apellidos;
-    }
-
-    public void setApellidos(String apellidos) {
-        this.apellidos = apellidos;
+    public void setFechaExpediccion(Date fechaExpediccion) {
+        this.fechaExpediccion = fechaExpediccion;
     }
 }

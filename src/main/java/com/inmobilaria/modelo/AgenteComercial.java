@@ -1,27 +1,101 @@
 package com.inmobilaria.modelo;
-
-import java.util.ArrayList;
-import java.util.List;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.Date;
 
 public class AgenteComercial extends Persona{
-    private String password, loguin;
-    private ArrayList<Persona> cliente;
+    private String contrasena, loguin;
 
-    public AgenteComercial(int cedula, String nombres,String apellidos, int fechaNacimiento, int fechaExpedicion, String correoElectronico, int telefono,
-                           String password, String loguin) {
-        super(cedula, nombres, fechaNacimiento, fechaExpedicion, correoElectronico, telefono, apellidos);
-        this.password = password;
+    //intacnia de conexion a la base de datos
+    private ConexionDB conexionDB = new ConexionDB();
+
+    //Contructor
+    public AgenteComercial(String cedula, String correo, String direccion, String nombreCompleto, String telefono1, Date fechaNacimiento, Date fechaExpediccion,
+                    String contrasena, String loguin) {
+        super(cedula, correo, direccion, nombreCompleto, telefono1, fechaNacimiento, fechaExpediccion);
+        this.contrasena = contrasena;
         this.loguin = loguin;
-
-        cliente = new ArrayList<>();
     }
 
-    public String getPassword() {
-        return password;
+    //Este metodo nos sirve para poder registrar un cliente
+    public boolean createAgenteComercial(AgenteComercial agenteComercial) {
+        String consulta = "INSERT INTO agente_comercial (\n" +
+                "    Cedula,\n" +
+                "    Contraseña,\n" +
+                "    Loguin,\n" +
+                "    Correo,\n" +
+                "    Celular,\n" +
+                "    Nombre_Completo,\n" +
+                "    Fecha_Nacimiento,\n" +
+                "    Fecha_Expedicion,\n" +
+                "    Direccion\n" +
+                ") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);";
+
+        try (PreparedStatement stmt = conexionDB.establecerConexion().prepareStatement(consulta)) {
+            stmt.setString(1, String.valueOf(agenteComercial.getCedula())); // Asegúrate de que el tipo de dato sea correcto
+            stmt.setString(2, agenteComercial.getContrasena()); // En producción, deberías encriptarla
+            stmt.setString(3, agenteComercial.getLoguin());
+            stmt.setString(4, agenteComercial.getCorreo());
+            stmt.setString(5, agenteComercial.getTelefono1());
+            stmt.setString(6, agenteComercial.getNombreCompleto());
+            stmt.setDate(7, agenteComercial.getFechaNacimientoSQL());
+            stmt.setDate(8, agenteComercial.getFechaExpediccionSQL());
+            stmt.setString(9, agenteComercial.getDireccion());
+
+            stmt.executeUpdate();
+            System.out.println("Agente comercial registrado exitosamente.");
+            return true;
+
+        } catch (SQLException e) {
+            System.err.println("Error al registrar el agente comercial: " + e.getMessage());
+            return false;
+        }
+    }
+    public  boolean mostarCliente(){
+
+       return false;
+    }
+    //metodo elimianr agenteComercial
+    public void eliminarAgente(String cedula){
+        //consuta sql
+        String consulta = "DELETE FROM agente_comercial WHERE Cedula = ?;";
+
+        try (PreparedStatement stmt = conexionDB.establecerConexion().prepareStatement(consulta)) {
+            stmt.setString(1, cedula);
+            stmt.executeUpdate();
+            System.out.println("Agente comercial eliminado exitosamente.");
+        } catch (SQLException e) {
+            System.err.println("Error al eliminar el agente comercial: " + e.getMessage());
+        }
+    }
+    public void modificarAgente(){
+
+    }
+    public void registarContratocliente(){
+
+    }
+    public void registarContratoPropietario(){
+
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public java.sql.Date getFechaNacimientoSQL() {
+        Date fechaNacimiento = getFechaNacimiento(); // Use the getter from Persona
+        return fechaNacimiento != null ? new java.sql.Date(fechaNacimiento.getTime()) : null;
+    }
+
+    public java.sql.Date getFechaExpediccionSQL() {
+        Date fechaExpediccion = getFechaExpediccion(); // Use the getter from Persona
+        return fechaExpediccion != null ? new java.sql.Date(fechaExpediccion.getTime()) : null;
+    }
+
+    //getters and setters
+
+    public String getContrasena() {
+        return contrasena;
+    }
+
+    public void setContrasena(String contrasena) {
+        this.contrasena = contrasena;
     }
 
     public String getLoguin() {
@@ -30,36 +104,6 @@ public class AgenteComercial extends Persona{
 
     public void setLoguin(String loguin) {
         this.loguin = loguin;
-    }
-
-    //Este metodo nos sirve para poder registrar un cliente
-    public void registrarCliente(int cedula, String nombres, int fechaNacimiento, int fechaExpedicion, String correoElectronico, int telefono, String apellidos){
-
-        cliente.add(new Persona(cedula,nombres,fechaNacimiento,fechaExpedicion,correoElectronico,telefono,apellidos));
-    }
-    public  boolean mostarCliente(){
-        for (int i = 0; i < cliente.size(); i++) {
-            System.out.println(
-                    " Nombre = " + cliente.get(i).getNombre() +
-                   "\n Apellidos = " + cliente.get(i).getApellidos()+ "\n Fecha nacimento = " + cliente.get(i).getFechaNacimiento() +
-                    "\n Fecha expedicion = " + cliente.get(i).getFechaExpedicion()+
-                    "\n Correo = " + cliente.get(i).getCorreoElectronico() +
-                    "\n Telefono = " + cliente.get(i).getTelefono());
-            return true;
-        }
-       return false;
-    }
-    public void borrarcliente(int index){
-
-    }
-    public void modificarCliente(){
-
-    }
-    public void registarContratocliente(){
-
-    }
-    public void registarContratoPropietario(){
-
     }
 
 }
