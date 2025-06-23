@@ -19,6 +19,16 @@ public class Persona {
         this.fechaExpediccion = fechaExpediccion;
     }
 
+    public java.sql.Date getFechaNacimientoSQL() {
+        Date fechaNacimiento = getFechaNacimiento(); // Use the getter from Persona
+        return fechaNacimiento != null ? new java.sql.Date(fechaNacimiento.getTime()) : null;
+    }
+
+    public java.sql.Date getFechaExpediccionSQL() {
+        Date fechaExpediccion = getFechaExpediccion(); // Use the getter from Persona
+        return fechaExpediccion != null ? new java.sql.Date(fechaExpediccion.getTime()) : null;
+    }
+
     public String getCedula() {
         return cedula;
     }
