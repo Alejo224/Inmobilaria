@@ -5,6 +5,8 @@
 //package vistas;
 package com.inmobilaria.vista;
 
+import com.inmobilaria.modelo.Cliente;
+
 import java.awt.CardLayout;
 
 /**
@@ -16,8 +18,12 @@ public class VistaAgenteComercial extends javax.swing.JFrame {
     /**
      * Creates new form VistaAgenteComercial
      */
+    private Cliente cliente;
+    private VistaContratoCliente vistaContratoCliente;
     public VistaAgenteComercial() {
+        cliente = new Cliente();        
         initComponents();
+        //cliente.mostrar(jtablaCliente);
     }
 
     /**
@@ -1490,6 +1496,10 @@ public class VistaAgenteComercial extends javax.swing.JFrame {
     private void btnGuardar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardar1ActionPerformed
          CardLayout cardLayout = (CardLayout)
         panelDerecho.getLayout();
+        if (cliente == null ){
+            cliente = new Cliente();
+        }
+        cliente.mostrar(jTable1);
         cardLayout.show(panelDerecho,"mostrarClientes");        // TODO add your handling code here:
     }//GEN-LAST:event_btnGuardar1ActionPerformed
 

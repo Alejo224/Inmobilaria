@@ -2,6 +2,10 @@ package com.inmobilaria.modelo;
 
 import com.inmobilaria.enums.ModalidadComercial;
 
+import javax.swing.*;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.time.LocalDate;
 import java.util.Date;
 
@@ -11,6 +15,7 @@ public abstract class Contrato {
     private Date fechaCreacion, fechaExpiracion;
     private double valor;
     private ModalidadComercial modalidadComercial;
+    private final ConexionDB conexionDB = new ConexionDB();
 
     public Contrato(int codigo, String descripcion, Date fechaCreacion,
                     Date fechaExpiracion, double valor, ModalidadComercial modalidadComercial) {
@@ -20,6 +25,25 @@ public abstract class Contrato {
         this.fechaExpiracion = fechaExpiracion;
         this.valor = valor;
         this.modalidadComercial = modalidadComercial;
+    }
+
+    public void cargarCodigosContratos(JComboBox<String> comboBox) {
+        DefaultComboBoxModel<String> modelo = new DefaultComboBoxModel<>();
+        String consulta = "SELECT codigo FROM contrato;";
+
+        try {
+            Statement st = conexionDB.establecerConexion().createStatement();
+            ResultSet rs = st.executeQuery(consulta);
+
+            while (rs.next()) {
+                modelo.addElement(rs.getString("codigo"));
+            }
+            comboBox.setModel(modelo);
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, "Error al cargar códigos de contratos: " + e.getMessage());
+        } finally {
+            conexionDB.cerrarConexion();
+        }
     }
 
     @Override
