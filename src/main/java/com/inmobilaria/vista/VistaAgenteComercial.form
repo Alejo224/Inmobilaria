@@ -3,9 +3,6 @@
 <Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
-    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[1020, 640]"/>
-    </Property>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -27,7 +24,7 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <Component id="badground" pref="1220" max="32767" attributes="0"/>
+              <Component id="badground" max="32767" attributes="0"/>
               <EmptySpace min="-2" pref="650" max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -58,18 +55,15 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace min="266" pref="266" max="-2" attributes="0"/>
-                  <Component id="panelDerecho" max="32767" attributes="0"/>
+                  <Component id="panelDerecho" min="-2" max="-2" attributes="0"/>
               </Group>
-              <Group type="102" alignment="0" attributes="0">
-                  <Component id="Menu" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-              </Group>
+              <Component id="Menu" alignment="0" min="-2" pref="288" max="-2" attributes="0"/>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
+              <Component id="panelDerecho" min="-2" max="-2" attributes="0"/>
               <Component id="Menu" max="32767" attributes="0"/>
-              <Component id="panelDerecho" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
       </Layout>
@@ -77,7 +71,7 @@
         <Container class="javax.swing.JPanel" name="Menu">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="cc" green="66" red="0" type="rgb"/>
+              <Color blue="99" green="66" red="0" type="rgb"/>
             </Property>
             <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[270, 640]"/>
@@ -87,23 +81,18 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="btnRegistroPropietario" alignment="0" max="32767" attributes="0"/>
                   <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="89" pref="89" max="-2" attributes="0"/>
-                              <Component id="jLabel1" min="-2" pref="85" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="56" pref="56" max="-2" attributes="0"/>
-                              <Component id="jSeparator4" min="-2" pref="165" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="btnRegistroCliente" max="32767" attributes="0"/>
-                          <Component id="btnContratoCliente" alignment="0" pref="270" max="32767" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <EmptySpace min="89" pref="89" max="-2" attributes="0"/>
+                      <Component id="jLabel1" min="-2" pref="85" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="btnContratoPropietario" alignment="0" max="32767" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="56" pref="56" max="-2" attributes="0"/>
+                      <Component id="jSeparator4" min="-2" pref="165" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="btnRegistroPropietario" min="-2" pref="260" max="-2" attributes="0"/>
+                  <Component id="btnRegistroCliente" min="-2" pref="260" max="-2" attributes="0"/>
+                  <Component id="btnContratoCliente" min="-2" pref="260" max="-2" attributes="0"/>
+                  <Component id="btnContratoPropietario" min="-2" pref="260" max="-2" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
@@ -113,24 +102,20 @@
                       <Component id="jLabel1" min="-2" pref="35" max="-2" attributes="0"/>
                       <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                       <Component id="jSeparator4" min="-2" pref="21" max="-2" attributes="0"/>
+                      <EmptySpace min="28" pref="28" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="188" max="-2" attributes="0"/>
-                              <Component id="btnRegistroPropietario" min="-2" pref="90" max="-2" attributes="0"/>
+                              <EmptySpace min="160" pref="160" max="-2" attributes="0"/>
+                              <Component id="btnRegistroPropietario" min="-2" pref="80" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="btnRegistroCliente" min="-2" pref="81" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="77" pref="77" max="-2" attributes="0"/>
+                              <Component id="btnContratoCliente" min="-2" pref="90" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="276" max="-2" attributes="0"/>
+                              <EmptySpace min="238" pref="238" max="-2" attributes="0"/>
                               <Component id="btnContratoPropietario" min="-2" pref="90" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="28" pref="28" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <EmptySpace min="77" pref="77" max="-2" attributes="0"/>
-                                      <Component id="btnContratoCliente" min="-2" pref="90" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="btnRegistroCliente" min="-2" pref="81" max="-2" attributes="0"/>
-                              </Group>
                           </Group>
                       </Group>
                   </Group>
@@ -153,7 +138,7 @@
             <Component class="javax.swing.JButton" name="btnContratoCliente">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="94" green="2f" red="0" type="rgb"/>
+                  <Color blue="99" green="66" red="0" type="rgb"/>
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="18" style="1"/>
@@ -162,7 +147,6 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Contrato cliente"/>
-                <Property name="borderPainted" type="boolean" value="false"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnContratoClienteActionPerformed"/>
@@ -171,7 +155,7 @@
             <Component class="javax.swing.JButton" name="btnContratoPropietario">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="94" green="2f" red="0" type="rgb"/>
+                  <Color blue="99" green="66" red="0" type="rgb"/>
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="18" style="1"/>
@@ -180,7 +164,9 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Contrato propietario"/>
-                <Property name="borderPainted" type="boolean" value="false"/>
+                <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                  <Color id="North Resize Cursor"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnContratoPropietarioActionPerformed"/>
@@ -189,7 +175,7 @@
             <Component class="javax.swing.JButton" name="btnRegistroCliente">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="94" green="2f" red="0" type="rgb"/>
+                  <Color blue="99" green="66" red="0" type="rgb"/>
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="18" style="1"/>
@@ -199,7 +185,6 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Registro cliente"/>
                 <Property name="toolTipText" type="java.lang.String" value=""/>
-                <Property name="borderPainted" type="boolean" value="false"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRegistroClienteActionPerformed"/>
@@ -215,7 +200,7 @@
             <Component class="javax.swing.JButton" name="btnRegistroPropietario">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="94" green="2f" red="0" type="rgb"/>
+                  <Color blue="99" green="66" red="0" type="rgb"/>
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="18" style="1"/>
@@ -224,7 +209,6 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Registro Propietario"/>
-                <Property name="borderPainted" type="boolean" value="false"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRegistroPropietarioActionPerformed"/>
@@ -380,49 +364,56 @@
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="129" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="157" max="-2" attributes="0"/>
-                                  <Component id="jLabel15" min="-2" pref="192" max="-2" attributes="0"/>
-                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Group type="103" groupAlignment="1" attributes="0">
-                                      <Component id="btnGuardar1" max="32767" attributes="0"/>
-                                      <Component id="txtPrimerNombre" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jLabel11" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="txtSegundoNombre" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jLabel8" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jLabel10" alignment="0" pref="207" max="32767" attributes="0"/>
-                                      <Component id="txtFechaExpedicion" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="txtPrimerApellido" alignment="1" max="32767" attributes="0"/>
-                                      <Component id="txtCedula" alignment="1" max="32767" attributes="0"/>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jLabel9" min="-2" pref="115" max="-2" attributes="0"/>
-                                              <Component id="jLabel17" min="-2" pref="112" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="-2" pref="129" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Group type="103" groupAlignment="1" attributes="0">
+                                              <Component id="btnMostrarRegistroCliente" max="32767" attributes="0"/>
+                                              <Component id="txtPrimerNombreCliente" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="jLabel11" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="txtSegundoNombreCliente" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="jLabel8" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="jLabel10" alignment="0" pref="207" max="32767" attributes="0"/>
+                                              <Component id="txtPrimerApellidoCliente" alignment="1" max="32767" attributes="0"/>
+                                              <Component id="txtCedula" alignment="1" max="32767" attributes="0"/>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="jLabel9" min="-2" pref="115" max="-2" attributes="0"/>
+                                                      <Component id="jLabel17" min="-2" pref="112" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                              </Group>
                                           </Group>
-                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                          <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" attributes="0">
+                                          <Component id="jDateFechaExpedicionCliente" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
                                   <Component id="jSeparator2" min="-2" pref="17" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="txtCorreoElectronnico" max="32767" attributes="0"/>
-                                      <Component id="txtTelefono2" max="32767" attributes="0"/>
+                                      <Component id="txtCorreoElectronnicoCliente" max="32767" attributes="0"/>
+                                      <Component id="txtTelefono2Cliente" max="32767" attributes="0"/>
                                       <Component id="jLabel18" min="-2" pref="111" max="-2" attributes="0"/>
                                       <Component id="jLabel14" min="-2" pref="68" max="-2" attributes="0"/>
-                                      <Component id="txtTelefono1" max="32767" attributes="0"/>
+                                      <Component id="txtTelefono1Cliente" max="32767" attributes="0"/>
                                       <Component id="jLabel16" min="-2" pref="69" max="-2" attributes="0"/>
-                                      <Component id="txtSegundoApellido" max="32767" attributes="0"/>
+                                      <Component id="txtSegundoApellidoCliente" max="32767" attributes="0"/>
                                       <Component id="jLabel13" min="-2" pref="124" max="-2" attributes="0"/>
-                                      <Component id="btnGuardar" alignment="0" pref="232" max="32767" attributes="0"/>
+                                      <Component id="btnGuardarRegistroCliente" alignment="0" pref="232" max="32767" attributes="0"/>
                                   </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="jLabel15" min="-2" pref="345" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="139" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace max="-2" attributes="0"/>
                           <Component id="jSeparator3" min="-2" pref="28" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="225" max="-2" attributes="0"/>
                           <Component id="jSeparator1" min="-2" pref="50" max="-2" attributes="0"/>
@@ -452,47 +443,47 @@
                                                   <Component id="txtCedula" min="-2" pref="43" max="-2" attributes="0"/>
                                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                   <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="txtFechaExpedicion" min="-2" pref="42" max="-2" attributes="0"/>
                                                   <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="jDateFechaExpedicionCliente" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                                                   <Component id="jLabel11" min="-2" pref="25" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="txtPrimerNombre" min="-2" pref="43" max="-2" attributes="0"/>
+                                                  <Component id="txtPrimerNombreCliente" min="-2" pref="43" max="-2" attributes="0"/>
                                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                                   <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="txtSegundoNombre" min="-2" pref="42" max="-2" attributes="0"/>
+                                                  <Component id="txtSegundoNombreCliente" min="-2" pref="42" max="-2" attributes="0"/>
                                                   <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                                                   <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="txtPrimerApellido" min="-2" pref="44" max="-2" attributes="0"/>
+                                                  <Component id="txtPrimerApellidoCliente" min="-2" pref="44" max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="0" attributes="0">
                                                       <Group type="102" attributes="0">
                                                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                          <Component id="btnGuardar" min="-2" pref="70" max="-2" attributes="0"/>
+                                                          <Component id="btnGuardarRegistroCliente" min="-2" pref="70" max="-2" attributes="0"/>
                                                       </Group>
                                                       <Group type="102" alignment="0" attributes="0">
                                                           <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                                                          <Component id="btnGuardar1" min="-2" pref="70" max="-2" attributes="0"/>
+                                                          <Component id="btnMostrarRegistroCliente" min="-2" pref="70" max="-2" attributes="0"/>
                                                       </Group>
                                                   </Group>
                                               </Group>
                                               <Group type="102" alignment="0" attributes="0">
                                                   <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Component id="txtSegundoApellido" min="-2" pref="45" max="-2" attributes="0"/>
+                                                  <Component id="txtSegundoApellidoCliente" min="-2" pref="45" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Component id="jLabel16" min="-2" pref="16" max="-2" attributes="0"/>
                                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Component id="txtTelefono1" min="-2" pref="46" max="-2" attributes="0"/>
+                                                  <Component id="txtTelefono1Cliente" min="-2" pref="46" max="-2" attributes="0"/>
                                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                   <Component id="jLabel14" min="-2" pref="24" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="txtTelefono2" min="-2" pref="40" max="-2" attributes="0"/>
+                                                  <Component id="txtTelefono2Cliente" min="-2" pref="40" max="-2" attributes="0"/>
                                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                   <Component id="jLabel18" min="-2" pref="24" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="txtCorreoElectronnico" min="-2" pref="42" max="-2" attributes="0"/>
+                                                  <Component id="txtCorreoElectronnicoCliente" min="-2" pref="42" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                       </Group>
@@ -506,11 +497,12 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JTextField" name="txtFechaExpedicion">
+                <Component class="javax.swing.JTextField" name="txtPrimerNombreCliente">
                 </Component>
-                <Component class="javax.swing.JTextField" name="txtPrimerNombre">
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtSegundoNombre">
+                <Component class="javax.swing.JTextField" name="txtSegundoNombreCliente">
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtSegundoNombreClienteActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JTextField" name="txtCedula">
                   <Events>
@@ -549,9 +541,9 @@
                     <Property name="text" type="java.lang.String" value="Primer Nombre"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="txtTelefono1">
+                <Component class="javax.swing.JTextField" name="txtTelefono1Cliente">
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtTelefono1ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtTelefono1ClienteActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel13">
@@ -562,9 +554,9 @@
                     <Property name="text" type="java.lang.String" value="Segundo Apellido"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="txtSegundoApellido">
+                <Component class="javax.swing.JTextField" name="txtSegundoApellidoCliente">
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtSegundoApellidoActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtSegundoApellidoClienteActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel14">
@@ -575,12 +567,12 @@
                     <Property name="text" type="java.lang.String" value="Telefono 2"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="btnGuardar">
+                <Component class="javax.swing.JButton" name="btnGuardarRegistroCliente">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="GUARDAR"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGuardarActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGuardarRegistroClienteActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel15">
@@ -589,7 +581,7 @@
                       <Font name="Segoe UI" size="36" style="1"/>
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
-                    <Property name="text" type="java.lang.String" value="REGISTRO"/>
+                    <Property name="text" type="java.lang.String" value="REGISTRO CLIENTE"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel16">
@@ -600,9 +592,9 @@
                     <Property name="text" type="java.lang.String" value="Telefono 1"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="txtTelefono2">
+                <Component class="javax.swing.JTextField" name="txtTelefono2Cliente">
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtTelefono2ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtTelefono2ClienteActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel17">
@@ -613,16 +605,16 @@
                     <Property name="text" type="java.lang.String" value="Primer Apellido"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="txtPrimerApellido">
+                <Component class="javax.swing.JTextField" name="txtPrimerApellidoCliente">
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtPrimerApellidoActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtPrimerApellidoClienteActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JSeparator" name="jSeparator1">
                 </Component>
-                <Component class="javax.swing.JTextField" name="txtCorreoElectronnico">
+                <Component class="javax.swing.JTextField" name="txtCorreoElectronnicoCliente">
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtCorreoElectronnicoActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtCorreoElectronnicoClienteActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JSeparator" name="jSeparator2">
@@ -643,13 +635,15 @@
                     <Property name="orientation" type="int" value="1"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="btnGuardar1">
+                <Component class="javax.swing.JButton" name="btnMostrarRegistroCliente">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="MOSTRARCLIENTE"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGuardar1ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMostrarRegistroClienteActionPerformed"/>
                   </Events>
+                </Component>
+                <Component class="com.toedter.calendar.JDateChooser" name="jDateFechaExpedicionCliente">
                 </Component>
               </SubComponents>
             </Container>
@@ -679,11 +673,11 @@
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="171" max="-2" attributes="0"/>
-                                  <Component id="btnAtras" min="-2" pref="168" max="-2" attributes="0"/>
+                                  <Component id="btnAtrasDeMostrarCLiente" min="-2" pref="168" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
-                                  <Component id="btnModificar1" min="-2" pref="168" max="-2" attributes="0"/>
+                                  <Component id="btnModificarRegistroCliente" min="-2" pref="168" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
-                                  <Component id="btnELeminar" min="-2" pref="186" max="-2" attributes="0"/>
+                                  <Component id="btnELeminarRegistroCliente" min="-2" pref="186" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace pref="333" max="32767" attributes="0"/>
@@ -697,9 +691,9 @@
                           <Component id="jScrollPane1" min="-2" pref="462" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="btnModificar1" alignment="3" min="-2" pref="93" max="-2" attributes="0"/>
-                              <Component id="btnELeminar" alignment="3" min="-2" pref="93" max="-2" attributes="0"/>
-                              <Component id="btnAtras" alignment="3" min="-2" pref="93" max="-2" attributes="0"/>
+                              <Component id="btnModificarRegistroCliente" alignment="3" min="-2" pref="93" max="-2" attributes="0"/>
+                              <Component id="btnELeminarRegistroCliente" alignment="3" min="-2" pref="93" max="-2" attributes="0"/>
+                              <Component id="btnAtrasDeMostrarCLiente" alignment="3" min="-2" pref="93" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace pref="44" max="32767" attributes="0"/>
                       </Group>
@@ -785,22 +779,22 @@
                     </Component>
                   </SubComponents>
                 </Container>
-                <Component class="javax.swing.JButton" name="btnModificar1">
+                <Component class="javax.swing.JButton" name="btnModificarRegistroCliente">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Modificar"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="btnELeminar">
+                <Component class="javax.swing.JButton" name="btnELeminarRegistroCliente">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="ELiminar"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="btnAtras">
+                <Component class="javax.swing.JButton" name="btnAtrasDeMostrarCLiente">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="ATRAS"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAtrasActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAtrasDeMostrarCLienteActionPerformed"/>
                   </Events>
                 </Component>
               </SubComponents>
@@ -850,18 +844,18 @@
                                           <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Component id="jRadioVenta1" alignment="0" min="-2" pref="98" max="-2" attributes="0"/>
-                                              <Component id="jComboBox1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jComboBoxCedulaRegistroContratoPropietario" min="-2" max="-2" attributes="0"/>
                                               <Component id="jLabel40" min="-2" pref="158" max="-2" attributes="0"/>
                                               <Component id="jLabel43" min="-2" pref="158" max="-2" attributes="0"/>
-                                              <Component id="jRadioAlquiler1" alignment="0" min="-2" pref="98" max="-2" attributes="0"/>
-                                              <Component id="btnGuardarContratoPropietario" alignment="0" min="-2" pref="184" max="-2" attributes="0"/>
+                                              <Component id="jRadioAlquilerRegistroPropietario" alignment="0" min="-2" pref="98" max="-2" attributes="0"/>
+                                              <Component id="btnGuardarRegistroContratoPropietario" alignment="0" min="-2" pref="184" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace max="32767" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="1" attributes="0">
                                           <Group type="103" groupAlignment="1" attributes="0">
-                                              <Component id="txtFechaExpedicion5" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="txtCedula3" max="32767" attributes="0"/>
+                                              <Component id="txtDescripcionRegistroContratoPropietario" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="txtCodigoRegistroContratoPropietario" max="32767" attributes="0"/>
                                           </Group>
                                           <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                                       </Group>
@@ -878,14 +872,14 @@
                                           <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Component id="jLabel33" min="-2" pref="121" max="-2" attributes="0"/>
-                                              <Component id="txtFechaExpedicion4" min="-2" pref="232" max="-2" attributes="0"/>
+                                              <Component id="txtValorRegistroContratoPropietario" min="-2" pref="232" max="-2" attributes="0"/>
                                               <Component id="jLabel38" alignment="0" min="-2" max="-2" attributes="0"/>
                                               <Component id="jLabel45" alignment="0" min="-2" pref="182" max="-2" attributes="0"/>
-                                              <Component id="txtPrimerApellido3" min="-2" pref="232" max="-2" attributes="0"/>
+                                              <Component id="txtPorcentajeComisionRegistroPropietario" min="-2" pref="232" max="-2" attributes="0"/>
                                               <Component id="jLabel46" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jDateFechaExpiracionContrato" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jDateFechaCreacionContrato" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="btnMostrarContratoPropietario1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jDateFechaExpiracionContratoRegistroPropietario" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jDateFechaCreacionContratoRegistroPropietario" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="btnMostrarRegistroContratoPropietario" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>
@@ -905,25 +899,25 @@
                                   <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                                   <Component id="jLabel39" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="txtCedula3" min="-2" pref="43" max="-2" attributes="0"/>
+                                  <Component id="txtCodigoRegistroContratoPropietario" min="-2" pref="43" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                                   <Component id="jLabel40" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="txtFechaExpedicion5" min="-2" pref="42" max="-2" attributes="0"/>
+                                  <Component id="txtDescripcionRegistroContratoPropietario" min="-2" pref="42" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                                   <Component id="jLabel43" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jComboBox1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jComboBoxCedulaRegistroContratoPropietario" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                                   <Component id="jLabel42" min="-2" pref="25" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jRadioVenta1" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jRadioAlquiler1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jRadioAlquilerRegistroPropietario" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="btnGuardarContratoPropietario" alignment="3" min="-2" pref="75" max="-2" attributes="0"/>
-                                      <Component id="btnMostrarContratoPropietario1" alignment="3" min="-2" pref="75" max="-2" attributes="0"/>
+                                      <Component id="btnGuardarRegistroContratoPropietario" alignment="3" min="-2" pref="75" max="-2" attributes="0"/>
+                                      <Component id="btnMostrarRegistroContratoPropietario" alignment="3" min="-2" pref="75" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
@@ -933,19 +927,19 @@
                                       <Group type="102" attributes="0">
                                           <Component id="jLabel33" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="txtFechaExpedicion4" min="-2" pref="42" max="-2" attributes="0"/>
+                                          <Component id="txtValorRegistroContratoPropietario" min="-2" pref="42" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                                           <Component id="jLabel38" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                                          <Component id="jDateFechaCreacionContrato" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jDateFechaCreacionContratoRegistroPropietario" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
                                           <Component id="jLabel45" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="jDateFechaExpiracionContrato" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jDateFechaExpiracionContratoRegistroPropietario" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                                           <Component id="jLabel46" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="txtPrimerApellido3" min="-2" pref="44" max="-2" attributes="0"/>
+                                          <Component id="txtPorcentajeComisionRegistroPropietario" min="-2" pref="44" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
@@ -962,11 +956,11 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JTextField" name="txtFechaExpedicion4">
+                <Component class="javax.swing.JTextField" name="txtValorRegistroContratoPropietario">
                 </Component>
-                <Component class="javax.swing.JTextField" name="txtPrimerApellido3">
+                <Component class="javax.swing.JTextField" name="txtPorcentajeComisionRegistroPropietario">
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtPrimerApellido3ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtPorcentajeComisionRegistroPropietarioActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel33">
@@ -977,7 +971,7 @@
                     <Property name="text" type="java.lang.String" value="Valor"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="txtFechaExpedicion5">
+                <Component class="javax.swing.JTextField" name="txtDescripcionRegistroContratoPropietario">
                 </Component>
                 <Component class="javax.swing.JSeparator" name="jSeparator7">
                   <Properties>
@@ -1000,9 +994,9 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGuardar6ActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="txtCedula3">
+                <Component class="javax.swing.JTextField" name="txtCodigoRegistroContratoPropietario">
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtCedula3ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtCodigoRegistroContratoPropietarioActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel38">
@@ -1046,7 +1040,7 @@
                     <Property name="text" type="java.lang.String" value="REGISTRO CONTRATO PROPIETARIO"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JRadioButton" name="jRadioAlquiler1">
+                <Component class="javax.swing.JRadioButton" name="jRadioAlquilerRegistroPropietario">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Alquiler"/>
                   </Properties>
@@ -1080,7 +1074,7 @@
                     <Property name="text" type="java.lang.String" value="Porcentaje de comision de INMOBILIARIA S:A"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JComboBox" name="jComboBox1">
+                <Component class="javax.swing.JComboBox" name="jComboBoxCedulaRegistroContratoPropietario">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                       <StringArray count="4">
@@ -1103,22 +1097,22 @@
                     <Property name="text" type="java.lang.String" value="Cedula del propietario"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="btnGuardarContratoPropietario">
+                <Component class="javax.swing.JButton" name="btnGuardarRegistroContratoPropietario">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="GUARDAR"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="btnMostrarContratoPropietario1">
+                <Component class="javax.swing.JButton" name="btnMostrarRegistroContratoPropietario">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="MOSTRAR CONTRATOS"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMostrarContratoPropietario1ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMostrarRegistroContratoPropietarioActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="com.toedter.calendar.JDateChooser" name="jDateFechaExpiracionContrato">
+                <Component class="com.toedter.calendar.JDateChooser" name="jDateFechaExpiracionContratoRegistroPropietario">
                 </Component>
-                <Component class="com.toedter.calendar.JDateChooser" name="jDateFechaCreacionContrato">
+                <Component class="com.toedter.calendar.JDateChooser" name="jDateFechaCreacionContratoRegistroPropietario">
                 </Component>
               </SubComponents>
             </Container>
@@ -1141,11 +1135,11 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <EmptySpace min="-2" pref="193" max="-2" attributes="0"/>
-                                  <Component id="btnAtrasCP" min="-2" pref="128" max="-2" attributes="0"/>
+                                  <Component id="btnAtrasRegistroContratoPropietario" min="-2" pref="128" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
-                                  <Component id="btnModificarContratoProieatario" min="-2" pref="128" max="-2" attributes="0"/>
+                                  <Component id="btnModificarRegistroContratoPropietario" min="-2" pref="128" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
-                                  <Component id="btnEleminarContratoPropietario" min="-2" pref="128" max="-2" attributes="0"/>
+                                  <Component id="btnEleminarRegistroContratoPropietario" min="-2" pref="128" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="131" max="-2" attributes="0"/>
@@ -1163,9 +1157,9 @@
                           <Component id="jScrollPane2" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="btnAtrasCP" alignment="3" min="-2" pref="74" max="-2" attributes="0"/>
-                              <Component id="btnModificarContratoProieatario" alignment="3" min="-2" pref="74" max="-2" attributes="0"/>
-                              <Component id="btnEleminarContratoPropietario" alignment="3" min="-2" pref="74" max="-2" attributes="0"/>
+                              <Component id="btnAtrasRegistroContratoPropietario" alignment="3" min="-2" pref="74" max="-2" attributes="0"/>
+                              <Component id="btnModificarRegistroContratoPropietario" alignment="3" min="-2" pref="74" max="-2" attributes="0"/>
+                              <Component id="btnEleminarRegistroContratoPropietario" alignment="3" min="-2" pref="74" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace pref="81" max="32767" attributes="0"/>
                       </Group>
@@ -1245,22 +1239,22 @@
                     </Component>
                   </SubComponents>
                 </Container>
-                <Component class="javax.swing.JButton" name="btnModificarContratoProieatario">
+                <Component class="javax.swing.JButton" name="btnModificarRegistroContratoPropietario">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="MODIFICAR"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="btnEleminarContratoPropietario">
+                <Component class="javax.swing.JButton" name="btnEleminarRegistroContratoPropietario">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="ELEMINAR"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="btnAtrasCP">
+                <Component class="javax.swing.JButton" name="btnAtrasRegistroContratoPropietario">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="ATRAS"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAtrasCPActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAtrasRegistroContratoPropietarioActionPerformed"/>
                   </Events>
                 </Component>
               </SubComponents>
@@ -1298,15 +1292,15 @@
                                       <Group type="102" attributes="0">
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Component id="jLabel29" alignment="0" min="-2" pref="158" max="-2" attributes="0"/>
-                                              <Component id="jRadioAlquiler" min="-2" pref="98" max="-2" attributes="0"/>
-                                              <Component id="jRadioVenta" min="-2" pref="98" max="-2" attributes="0"/>
+                                              <Component id="jRadioAlquilerRegistroContratoCliente" min="-2" pref="98" max="-2" attributes="0"/>
+                                              <Component id="jRadioVentaRegistroContratoCliente" min="-2" pref="98" max="-2" attributes="0"/>
                                               <Component id="jLabel32" alignment="0" min="-2" pref="121" max="-2" attributes="0"/>
                                               <Component id="jLabel44" min="-2" pref="121" max="-2" attributes="0"/>
-                                              <Component id="jComboCedulaCLiente" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jComboCedulaCLienteRegistroContratoCliente" min="-2" max="-2" attributes="0"/>
                                               <Component id="txtFechaExpedicion3" alignment="0" min="-2" pref="243" max="-2" attributes="0"/>
                                               <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                                  <Component id="txtCedula2" alignment="0" pref="238" max="32767" attributes="0"/>
-                                                  <Component id="txtFechaExpedicion2" alignment="0" max="32767" attributes="0"/>
+                                                  <Component id="txtCodigoRegistroContratoCliente" alignment="0" pref="238" max="32767" attributes="0"/>
+                                                  <Component id="txtDescripcionRegistroContratoCliente" alignment="0" max="32767" attributes="0"/>
                                               </Group>
                                           </Group>
                                           <EmptySpace pref="83" max="32767" attributes="0"/>
@@ -1316,20 +1310,20 @@
                                   <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
-                                  <Component id="btnMostrarContratoCliente" min="-2" pref="243" max="-2" attributes="0"/>
+                                  <Component id="btnMostrarContratoRegistroContratoCliente" min="-2" pref="243" max="-2" attributes="0"/>
                                   <EmptySpace max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jDatefechaExpedicionContratoCLiente" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtNombreFiador" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jDatefechaExpedicionContratoCLienteRegistroContratoCliente" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtNombreFiadorRegistroContratoCliente" alignment="0" max="32767" attributes="0"/>
                               <Component id="jLabel31" alignment="0" min="-2" pref="124" max="-2" attributes="0"/>
                               <Component id="jLabel28" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel36" alignment="0" min="-2" pref="182" max="-2" attributes="0"/>
-                              <Component id="txtTelefonoFiador" alignment="0" pref="232" max="32767" attributes="0"/>
+                              <Component id="txtTelefonoFiadorRegistroContratoCliente" alignment="0" pref="232" max="32767" attributes="0"/>
                               <Component id="jLabel35" alignment="0" min="-2" pref="129" max="-2" attributes="0"/>
-                              <Component id="jDatefechaCreacionContrato" min="-2" max="-2" attributes="0"/>
-                              <Component id="btnGuardarContratoCLiente" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jDatefechaCreacionContratoRegistroContratoCliente" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnGuardarRegistroContratoCliente" alignment="0" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="441" max="-2" attributes="0"/>
                       </Group>
@@ -1352,40 +1346,40 @@
                                           <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                                           <Component id="jLabel31" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="txtNombreFiador" min="-2" pref="45" max="-2" attributes="0"/>
+                                          <Component id="txtNombreFiadorRegistroContratoCliente" min="-2" pref="45" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="jLabel35" min="-2" pref="16" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
-                                          <Component id="txtTelefonoFiador" min="-2" pref="46" max="-2" attributes="0"/>
+                                          <Component id="txtTelefonoFiadorRegistroContratoCliente" min="-2" pref="46" max="-2" attributes="0"/>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Component id="jLabel28" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="jDatefechaCreacionContrato" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jDatefechaCreacionContratoRegistroContratoCliente" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                                           <Component id="jLabel36" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="jDatefechaExpedicionContratoCLiente" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jDatefechaExpedicionContratoCLienteRegistroContratoCliente" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="jLabel37" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="txtCedula2" min="-2" pref="43" max="-2" attributes="0"/>
+                                          <Component id="txtCodigoRegistroContratoCliente" min="-2" pref="43" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                                           <Component id="jLabel29" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="txtFechaExpedicion2" min="-2" pref="42" max="-2" attributes="0"/>
+                                          <Component id="txtDescripcionRegistroContratoCliente" min="-2" pref="42" max="-2" attributes="0"/>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Component id="jLabel30" min="-2" pref="25" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jRadioVenta" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jRadioVentaRegistroContratoCliente" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="jRadioAlquiler" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jRadioAlquilerRegistroContratoCliente" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Component id="jLabel44" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="32767" attributes="0"/>
-                                          <Component id="jComboCedulaCLiente" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jComboCedulaCLienteRegistroContratoCliente" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                           <Component id="jLabel32" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -1399,8 +1393,8 @@
                                   <Component id="jSeparator6" min="-2" pref="420" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="btnMostrarContratoCliente" alignment="3" min="-2" pref="59" max="-2" attributes="0"/>
-                                      <Component id="btnGuardarContratoCLiente" alignment="3" min="-2" pref="62" max="-2" attributes="0"/>
+                                      <Component id="btnMostrarContratoRegistroContratoCliente" alignment="3" min="-2" pref="59" max="-2" attributes="0"/>
+                                      <Component id="btnGuardarRegistroContratoCliente" alignment="3" min="-2" pref="62" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
                               </Group>
@@ -1423,24 +1417,24 @@
                     <Property name="text" type="java.lang.String" value="Valor"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="txtFechaExpedicion2">
+                <Component class="javax.swing.JTextField" name="txtDescripcionRegistroContratoCliente">
                 </Component>
                 <Component class="javax.swing.JSeparator" name="jSeparator6">
                   <Properties>
                     <Property name="orientation" type="int" value="1"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="btnMostrarContratoCliente">
+                <Component class="javax.swing.JButton" name="btnMostrarContratoRegistroContratoCliente">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="MOSTRAR CONTRATOS"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMostrarContratoClienteActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMostrarContratoRegistroContratoClienteActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="txtCedula2">
+                <Component class="javax.swing.JTextField" name="txtCodigoRegistroContratoCliente">
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtCedula2ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtCodigoRegistroContratoClienteActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel28">
@@ -1451,12 +1445,12 @@
                     <Property name="text" type="java.lang.String" value="Fecha de creacion del contrato"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="btnGuardarContratoCLiente">
+                <Component class="javax.swing.JButton" name="btnGuardarRegistroContratoCliente">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="GUARDAR"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGuardarContratoCLienteActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGuardarRegistroContratoClienteActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel37">
@@ -1484,7 +1478,7 @@
                     <Property name="text" type="java.lang.String" value="REGISTRO CONTRATO CLIENTE"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JRadioButton" name="jRadioAlquiler">
+                <Component class="javax.swing.JRadioButton" name="jRadioAlquilerRegistroContratoCliente">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Alquiler"/>
                   </Properties>
@@ -1505,14 +1499,14 @@
                     <Property name="text" type="java.lang.String" value="Telefono del Fiador"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JRadioButton" name="jRadioVenta">
+                <Component class="javax.swing.JRadioButton" name="jRadioVentaRegistroContratoCliente">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Venta"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="txtTelefonoFiador">
+                <Component class="javax.swing.JTextField" name="txtTelefonoFiadorRegistroContratoCliente">
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtTelefonoFiadorActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtTelefonoFiadorRegistroContratoClienteActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel31">
@@ -1531,9 +1525,9 @@
                     <Property name="text" type="java.lang.String" value="Fecha expiraci&#xf3;n del contrato"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="txtNombreFiador">
+                <Component class="javax.swing.JTextField" name="txtNombreFiadorRegistroContratoCliente">
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNombreFiadorActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNombreFiadorRegistroContratoClienteActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel44">
@@ -1544,7 +1538,7 @@
                     <Property name="text" type="java.lang.String" value="Cedula cliente"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JComboBox" name="jComboCedulaCLiente">
+                <Component class="javax.swing.JComboBox" name="jComboCedulaCLienteRegistroContratoCliente">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                       <StringArray count="4">
@@ -1559,9 +1553,9 @@
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                   </AuxValues>
                 </Component>
-                <Component class="com.toedter.calendar.JDateChooser" name="jDatefechaCreacionContrato">
+                <Component class="com.toedter.calendar.JDateChooser" name="jDatefechaCreacionContratoRegistroContratoCliente">
                 </Component>
-                <Component class="com.toedter.calendar.JDateChooser" name="jDatefechaExpedicionContratoCLiente">
+                <Component class="com.toedter.calendar.JDateChooser" name="jDatefechaExpedicionContratoCLienteRegistroContratoCliente">
                 </Component>
               </SubComponents>
             </Container>
@@ -1584,11 +1578,11 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <EmptySpace min="-2" pref="108" max="-2" attributes="0"/>
-                                  <Component id="btnAtrasContratoCliente" min="-2" pref="128" max="-2" attributes="0"/>
+                                  <Component id="btnAtrasRegistroContratoCliente" min="-2" pref="128" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
-                                  <Component id="btnModificarContratoCLiente" min="-2" pref="128" max="-2" attributes="0"/>
+                                  <Component id="btnModificarRegistroContratoCliente" min="-2" pref="128" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
-                                  <Component id="btnEleminarContratoCliente" min="-2" pref="128" max="-2" attributes="0"/>
+                                  <Component id="btnEleminarRegistroContratoCliente" min="-2" pref="128" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="92" max="-2" attributes="0"/>
@@ -1606,9 +1600,9 @@
                           <Component id="jScrollPane3" min="-2" max="-2" attributes="0"/>
                           <EmptySpace pref="41" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="btnAtrasContratoCliente" alignment="3" min="-2" pref="74" max="-2" attributes="0"/>
-                              <Component id="btnModificarContratoCLiente" alignment="3" min="-2" pref="74" max="-2" attributes="0"/>
-                              <Component id="btnEleminarContratoCliente" alignment="3" min="-2" pref="74" max="-2" attributes="0"/>
+                              <Component id="btnAtrasRegistroContratoCliente" alignment="3" min="-2" pref="74" max="-2" attributes="0"/>
+                              <Component id="btnModificarRegistroContratoCliente" alignment="3" min="-2" pref="74" max="-2" attributes="0"/>
+                              <Component id="btnEleminarRegistroContratoCliente" alignment="3" min="-2" pref="74" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                       </Group>
@@ -1694,22 +1688,22 @@
                     </Component>
                   </SubComponents>
                 </Container>
-                <Component class="javax.swing.JButton" name="btnModificarContratoCLiente">
+                <Component class="javax.swing.JButton" name="btnModificarRegistroContratoCliente">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="MODIFICAR"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="btnEleminarContratoCliente">
+                <Component class="javax.swing.JButton" name="btnEleminarRegistroContratoCliente">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="ELEMINAR"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="btnAtrasContratoCliente">
+                <Component class="javax.swing.JButton" name="btnAtrasRegistroContratoCliente">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="ATRAS"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAtrasContratoClienteActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAtrasRegistroContratoClienteActionPerformed"/>
                   </Events>
                 </Component>
               </SubComponents>
@@ -1891,55 +1885,35 @@
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace pref="123" max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="txtPrimerApellidoPropietario" alignment="1" max="32767" attributes="0"/>
-                                      <Component id="txtSegundoNombrePropietario" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jLabel22" min="-2" pref="112" max="-2" attributes="0"/>
-                                      <Component id="jLabel12" min="-2" pref="115" max="-2" attributes="0"/>
-                                      <Component id="txtPrimerNombrePropietario" max="32767" attributes="0"/>
-                                      <Component id="jLabel20" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="txtFechaExpedicion1" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="txtCedulaPropiietario" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jLabel26" alignment="0" pref="233" max="32767" attributes="0"/>
-                                  </Group>
-                                  <Component id="jLabel19" alignment="1" min="-2" pref="233" max="-2" attributes="0"/>
+                          <EmptySpace pref="127" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="txtNombreCompletoPropietario" max="32767" attributes="0"/>
+                              <Component id="jLabel20" alignment="0" max="32767" attributes="0"/>
+                              <Component id="txtCedulaPropiietario" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jLabel26" alignment="0" min="-2" pref="233" max="-2" attributes="0"/>
+                              <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="jLabel48" min="-2" pref="69" max="-2" attributes="0"/>
+                                  <Component id="txtDireccionPropietario" pref="232" max="32767" attributes="0"/>
+                                  <Component id="jLabel25" alignment="0" min="-2" pref="111" max="-2" attributes="0"/>
+                                  <Component id="txtCorreoElectronnicoPropietario" pref="232" max="32767" attributes="0"/>
+                                  <Component id="btnGuardarRegistroPropietario" alignment="0" max="32767" attributes="0"/>
                               </Group>
-                              <Component id="jLabel23" min="-2" pref="124" max="-2" attributes="0"/>
-                              <Component id="txtSegundoApellidoPropietario" min="-2" pref="232" max="-2" attributes="0"/>
-                              <Component id="jLabel48" min="-2" pref="69" max="-2" attributes="0"/>
-                              <Component id="txtDireccionPropietario" min="-2" pref="232" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="116" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="112" max="-2" attributes="0"/>
                           <Component id="jSeparator5" min="-2" pref="52" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jLabel21" min="-2" pref="69" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                          <Component id="txtTelefono5" max="32767" attributes="0"/>
-                                          <Component id="txtTelefono2Propietario" alignment="1" pref="232" max="32767" attributes="0"/>
-                                          <Component id="jLabel24" alignment="0" min="-2" pref="68" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Component id="jDateFechaExpedicionPropietario" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel49" alignment="0" min="-2" pref="111" max="-2" attributes="0"/>
-                                      <Component id="jDateFechaNacimientoPropietario" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel47" alignment="0" min="-2" pref="111" max="-2" attributes="0"/>
-                                      <Component id="jLabel25" alignment="0" min="-2" pref="111" max="-2" attributes="0"/>
-                                      <Component id="txtCorreoElectronnicoPropietario" min="-2" pref="232" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="btnGuardarRegistroPropietario" min="-2" pref="148" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
-                                  <Component id="btnMostrarRegistroPropietario" min="-2" pref="143" max="-2" attributes="0"/>
-                              </Group>
+                          <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="jLabel21" min="-2" pref="69" max="-2" attributes="0"/>
+                              <Component id="txtTelefono1Propietario" alignment="1" max="32767" attributes="0"/>
+                              <Component id="txtTelefono2Propietario" alignment="1" pref="232" max="32767" attributes="0"/>
+                              <Component id="jLabel24" alignment="0" min="-2" pref="68" max="-2" attributes="0"/>
+                              <Component id="jDateFechaExpedicionPropietario" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel49" alignment="0" min="-2" pref="111" max="-2" attributes="0"/>
+                              <Component id="jDateFechaNacimientoPropietario" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel47" alignment="0" min="-2" pref="111" max="-2" attributes="0"/>
+                              <Component id="btnMostrarRegistroPropietario" alignment="0" max="32767" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="352" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="388" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="276" max="-2" attributes="0"/>
@@ -1960,106 +1934,75 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                           <Component id="jLabel27" min="-2" pref="37" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
-                                  <Component id="jLabel26" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="jSeparator5" min="-2" pref="506" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                                   <Component id="jLabel47" min="-2" pref="24" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jDateFechaNacimientoPropietario" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
+                                  <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
                                   <Component id="jLabel49" min="-2" pref="24" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jDateFechaExpedicionPropietario" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
                                   <Component id="jLabel21" min="-2" pref="16" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="txtTelefono5" min="-2" pref="46" max="-2" attributes="0"/>
+                                  <Component id="txtTelefono1Propietario" min="-2" pref="46" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jLabel24" min="-2" pref="24" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Component id="txtTelefono2Propietario" min="-2" pref="40" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jLabel25" min="-2" pref="24" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="txtCorreoElectronnicoPropietario" min="-2" pref="42" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="btnGuardarRegistroPropietario" alignment="3" min="-2" pref="70" max="-2" attributes="0"/>
-                                      <Component id="btnMostrarRegistroPropietario" alignment="3" min="-2" pref="70" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
+                                  <Component id="btnMostrarRegistroPropietario" min="-2" pref="97" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="txtCedulaPropiietario" min="-2" pref="43" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jLabel19" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="txtFechaExpedicion1" min="-2" pref="42" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jLabel20" min="-2" pref="25" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="txtPrimerNombrePropietario" min="-2" pref="43" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="txtSegundoNombrePropietario" min="-2" pref="42" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jLabel22" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="txtPrimerApellidoPropietario" min="-2" pref="44" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jLabel23" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="txtSegundoApellidoPropietario" min="-2" pref="45" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jLabel48" min="-2" pref="16" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="txtDireccionPropietario" min="-2" pref="46" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Component id="jLabel26" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                                          <Component id="txtCedulaPropiietario" min="-2" pref="31" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                                          <Component id="jLabel20" min="-2" pref="25" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="txtNombreCompletoPropietario" min="-2" pref="43" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                                          <Component id="jLabel48" min="-2" pref="16" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="txtDireccionPropietario" min="-2" pref="46" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="jLabel25" min="-2" pref="24" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Component id="txtCorreoElectronnicoPropietario" min="-2" pref="42" max="-2" attributes="0"/>
+                                          <EmptySpace max="32767" attributes="0"/>
+                                          <Component id="btnGuardarRegistroPropietario" min="-2" pref="100" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" attributes="0">
+                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                          <Component id="jSeparator5" min="-2" pref="506" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
                               </Group>
                           </Group>
+                          <EmptySpace min="-2" pref="87" max="-2" attributes="0"/>
                       </Group>
                       <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                               <Component id="jSeparator8" min="-2" pref="586" max="-2" attributes="0"/>
-                              <EmptySpace pref="27" max="32767" attributes="0"/>
+                              <EmptySpace pref="46" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="jLabel12">
-                  <Properties>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Segoe UI" size="12" style="1"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Segundo Nombre"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="jLabel19">
-                  <Properties>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Segoe UI" size="12" style="1"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Fecha de expedicion del documento"/>
-                  </Properties>
-                </Component>
                 <Component class="javax.swing.JLabel" name="jLabel20">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Segoe UI" size="12" style="1"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Primer Nombre"/>
+                    <Property name="text" type="java.lang.String" value="Nombre completo"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel21">
@@ -2080,35 +2023,7 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtDireccionPropietarioActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel22">
-                  <Properties>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Segoe UI" size="12" style="1"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Primer Apellido"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="jLabel23">
-                  <Properties>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Segoe UI" size="12" style="1"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Segundo Apellido"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtPrimerApellidoPropietario">
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtPrimerApellidoPropietarioActionPerformed"/>
-                  </Events>
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtFechaExpedicion1">
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtSegundoApellidoPropietario">
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtSegundoApellidoPropietarioActionPerformed"/>
-                  </Events>
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtPrimerNombrePropietario">
+                <Component class="javax.swing.JTextField" name="txtNombreCompletoPropietario">
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel24">
                   <Properties>
@@ -2117,8 +2032,6 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Telefono 2"/>
                   </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtSegundoNombrePropietario">
                 </Component>
                 <Component class="javax.swing.JSeparator" name="jSeparator5">
                   <Properties>
@@ -2199,9 +2112,9 @@
                     <Property name="text" type="java.lang.String" value="Direccion"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="txtTelefono5">
+                <Component class="javax.swing.JTextField" name="txtTelefono1Propietario">
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtTelefono5ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtTelefono1PropietarioActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="com.toedter.calendar.JDateChooser" name="jDateFechaExpedicionPropietario">
