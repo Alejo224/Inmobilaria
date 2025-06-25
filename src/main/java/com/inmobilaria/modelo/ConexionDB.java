@@ -9,9 +9,11 @@ import java.sql.*;
 public class ConexionDB {
 
     Connection connection = null;
-    private final String user = System.getenv("DB_USER");
-    private final String password = System.getenv("DB_PASSWORD");
-    private final String url = System.getenv("DB_URL");
+    private final String user = "root";
+    private final String password = "187512Fami";
+    private final String url ="jdbc:mysql://localhost:3306/inmobiliaria_db";
+    
+   
 
     private static final String DRIVER_MSQL = "com.mysql.cj.jdbc.Driver";
     private static final String DRIVER_POSTGRESQL = "org.postgresql.Driver";

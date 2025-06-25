@@ -6,12 +6,15 @@ import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.sql.*;
 import java.time.LocalDate;
+import java.util.Arrays;
 import java.util.Date;
 
 public class ContratoCliente extends Contrato{
     private String nombreFiador, telefonoFiador;
     private final ConexionDB conexionDB = new ConexionDB();
 
+    public ContratoCliente(){}
+    
     public ContratoCliente(int codigo, String descripcion, Date fechaCreacion, Date fechaExpiracion,
                            double valor, ModalidadComercial modalidadComercial, String nombreFiador,
                            String telefonoFiador) {
@@ -88,7 +91,7 @@ public class ContratoCliente extends Contrato{
         }
     }
 
-    // MOSTRAR (Llenar JTable)
+    // MOSTRAR en la tabla(Llenar JTable)
     public void mostrar(JTable tabla) {
         DefaultTableModel modelo = new DefaultTableModel();
         modelo.addColumn("Cédula Cliente");
@@ -96,20 +99,24 @@ public class ContratoCliente extends Contrato{
         modelo.addColumn("Nombre Fiador");
         modelo.addColumn("Valor");
         modelo.addColumn("Número Fiador");
-
+        
+        tabla.setModel(modelo);
         String sql = "SELECT * FROM contrato_cliente";
-        try (Connection con = conexionDB.establecerConexion();
-             Statement st = con.createStatement();
-             ResultSet rs = st.executeQuery(sql)) {
+        
+        try  {
+            
+            Statement st = conexionDB.establecerConexion().createStatement();
+            ResultSet rs = st.executeQuery(sql);
 
             while (rs.next()) {
                 Object[] fila = new Object[]{
-                        rs.getString("cedula_cliente"),
-                        rs.getString("codigo_contrato"),
-                        rs.getString("nombre_fiador"),
-                        rs.getBigDecimal("valor"),
-                        rs.getString("numero_fiador")
+                    rs.getString("cedula_cliente"),
+                    rs.getString("codigo_contrato"),
+                    rs.getString("nombre_fiador"),
+                    rs.getBigDecimal("valor"),
+                    rs.getString("numero_fiador")
                 };
+                System.out.println("Agregando fila: " + Arrays.toString(fila));
                 modelo.addRow(fila);
             }
             tabla.setModel(modelo);

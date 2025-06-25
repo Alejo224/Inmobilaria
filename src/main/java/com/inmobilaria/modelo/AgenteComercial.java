@@ -1,5 +1,7 @@
 package com.inmobilaria.modelo;
+import javax.swing.*;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Date;
 
@@ -10,6 +12,7 @@ public class AgenteComercial extends Persona{
     private ConexionDB conexionDB = new ConexionDB();
 
     //Contructor
+    public AgenteComercial(){};
     public AgenteComercial(String cedula, String correo, String direccion, String nombreCompleto, String telefono1, Date fechaNacimiento, Date fechaExpediccion,
                     String contrasena, String loguin) {
         super(cedula, correo, direccion, nombreCompleto, telefono1, fechaNacimiento, fechaExpediccion);
@@ -76,6 +79,21 @@ public class AgenteComercial extends Persona{
     }
     public void registarContratoPropietario(){
 
+    }
+
+    public void cargarCedulasAgentes(JComboBox<String> comboBox) {
+        comboBox.removeAllItems();
+        String consulta = "SELECT cedula FROM agente_comercial";
+        try (PreparedStatement stmt = conexionDB.establecerConexion().prepareStatement(consulta);
+             ResultSet rs = stmt.executeQuery()) {
+            while (rs.next()) {
+                comboBox.addItem(rs.getString("cedula"));
+            }
+        } catch (SQLException e) {
+            System.err.println("Error al cargar las cédulas de agentes: " + e.getMessage());
+        } finally {
+            conexionDB.cerrarConexion();
+        }
     }
 
     //getters and setters
