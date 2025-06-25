@@ -1,11 +1,15 @@
 package com.inmobilaria.modelo;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import javax.swing.*;
+import javax.swing.table.DefaultTableCellRenderer;
+import javax.swing.table.DefaultTableModel;
+import java.sql.*;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class AgenteComercial extends Persona{
     private String contrasena, loguin;
-
+    private Propietario propietario;
     //intacnia de conexion a la base de datos
     private ConexionDB conexionDB = new ConexionDB();
 
@@ -15,6 +19,7 @@ public class AgenteComercial extends Persona{
         super(cedula, correo, direccion, nombreCompleto, telefono1, fechaNacimiento, fechaExpediccion);
         this.contrasena = contrasena;
         this.loguin = loguin;
+
     }
 
     //Este metodo nos sirve para poder registrar un cliente
@@ -104,6 +109,162 @@ public class AgenteComercial extends Persona{
 
     public void setLoguin(String loguin) {
         this.loguin = loguin;
+    }
+    public boolean registrarPropietario(String cedula, String correo, String direccion, String nombreCompleto, String telefono1, String telefono2,
+                                     Date fechaNacimiento, Date fechaExpediccion){
+
+        String consulta= "INSERT INTO propietario (cedula, correo, direccion, nombre_completo, telefono1, telefono2, fecha_nacimiento, fecha_expedicion) " +
+                       "VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+
+        propietario = new Propietario(cedula,correo,direccion,nombreCompleto,telefono1,telefono2,fechaNacimiento,fechaExpediccion);
+
+        try(Connection conn = conexionDB.establecerConexion();
+            PreparedStatement statement = conn.prepareStatement(consulta)) {
+
+            statement.setString(1,propietario.getCedula());
+            statement.setString(2,propietario.getCorreo());
+            statement.setString(3,propietario.getDireccion());
+            statement.setString(4,propietario.getNombreCompleto());
+            statement.setString(5,propietario.getTelefono1());
+            statement.setString(6,propietario.getTelefono2());
+            statement.setDate(7,new java.sql.Date(propietario.getFechaNacimiento().getTime()));
+            statement.setDate(8,new java.sql.Date(propietario.getFechaExpediccion().getTime()));
+
+            int filaInsertada = statement.executeUpdate();
+
+            if(filaInsertada > 0){
+                JOptionPane.showMessageDialog(null,"Registro guardado","Exito",JOptionPane.INFORMATION_MESSAGE);
+                System.out.println("Se registro Propietario");
+                return true;
+            }
+            else{
+                System.out.println("No se registro");
+            }
+
+        }catch (SQLException e){
+            System.out.println("Error al registrar" + e.getMessage());
+            e.printStackTrace();
+        }
+
+        return false;
+    }
+
+    public List<Propietario> obtenerListaPropietarios() {
+        List<Propietario> lista = new ArrayList<>();
+        String sql = "SELECT * FROM propietario";
+
+        try (Connection conn = conexionDB.establecerConexion();
+             Statement stmt = conn.createStatement();
+             ResultSet rs = stmt.executeQuery(sql)) {
+
+            while (rs.next()) {
+                Propietario p = new Propietario(
+                        rs.getString("cedula"),
+                        rs.getString("correo"),
+                        rs.getString("direccion"),
+                        rs.getString("nombre_completo"),
+                        rs.getString("telefono1"),
+                        rs.getString("telefono2"),
+                        rs.getDate("fecha_nacimiento"),
+                        rs.getDate("fecha_expedicion")
+                );
+                lista.add(p);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            System.out.println("Errore al guardar");
+        }
+
+        return lista;
+    }
+
+    public boolean EliminarRegistroPropietario(String cedula){
+
+        String consulta= "DELETE FROM propietario WHERE cedula =?";
+
+        try(Connection conn = conexionDB.establecerConexion();
+            PreparedStatement ps = conn.prepareStatement(consulta)){
+
+            ps.setString(1,cedula);
+            int filaInsertada = ps.executeUpdate();
+
+            if(filaInsertada > 0 ){
+                JOptionPane.showMessageDialog(null,"Eliminado Correctamente","Eliminado",JOptionPane.PLAIN_MESSAGE);
+                System.out.println("Eliminado");
+                return true;
+            }
+            else {
+                System.out.println("No se encontro esa ccedula");
+            }
+
+        }catch (SQLException e){
+            System.out.println("Error al Eliminar el propietario");
+        }
+        return false;
+    }
+    public boolean regisrto(Propietario propietario){
+        String consulta= "INSERT INTO propietario (cedula, correo, direccion, nombre_completo, telefono1, telefono2, fecha_nacimiento, fecha_expedicion) " +
+                "VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+
+        try(Connection conn = conexionDB.establecerConexion();
+            PreparedStatement statement = conn.prepareStatement(consulta)) {
+
+            statement.setString(1,propietario.getCedula());
+            statement.setString(2,propietario.getCorreo());
+            statement.setString(3,propietario.getDireccion());
+            statement.setString(4,propietario.getNombreCompleto());
+            statement.setString(5,propietario.getTelefono1());
+            statement.setString(6,propietario.getTelefono2());
+            statement.setDate(7,new java.sql.Date(propietario.getFechaNacimiento().getTime()));
+            statement.setDate(8,new java.sql.Date(propietario.getFechaExpediccion().getTime()));
+
+            int filaInsertada = statement.executeUpdate();
+
+            if(filaInsertada > 0){
+                JOptionPane.showMessageDialog(null,"Registro guardado","Exito",JOptionPane.INFORMATION_MESSAGE);
+                System.out.println("Se registro Propietario");
+                return true;
+            }
+            else{
+                System.out.println("No se registro");
+            }
+
+        }catch (SQLException e){
+            System.out.println("Error al registrar" + e.getMessage());
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+      public List<Cliente> obtenerListaClientes() {
+        List<Cliente> lista = new ArrayList<>();
+        String sql = "SELECT * FROM propietario";
+
+        try (Connection conn = conexionDB.establecerConexion();
+             Statement stmt = conn.createStatement();
+             ResultSet rs = stmt.executeQuery(sql)) {
+
+            while (rs.next()) {
+                    Cliente c = new Cliente(
+                        rs.getString("cedula"),
+                        rs.getString("correo"),
+                        rs.getString("direccion"),
+                        rs.getString("nombre_completo"),
+                        rs.getString("telefono1"),
+                        rs.getDate("fecha_nacimiento"),
+                        rs.getDate("fecha_expedicion"),
+                            rs.getString("telefono2")
+                );
+                lista.add(c);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            System.out.println("Errore al guardar");
+        }
+
+        return lista;
     }
 
 }

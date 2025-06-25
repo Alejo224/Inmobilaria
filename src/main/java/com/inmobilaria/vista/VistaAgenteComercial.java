@@ -5,7 +5,14 @@
 //package vistas;
 package com.inmobilaria.vista;
 
+import com.inmobilaria.modelo.AgenteComercial;
+import com.inmobilaria.modelo.Cliente;
+import com.inmobilaria.modelo.Propietario;
+
+import javax.swing.table.DefaultTableModel;
 import java.awt.CardLayout;
+import java.util.Date;
+import java.util.List;
 
 /**
  *
@@ -19,6 +26,10 @@ public class VistaAgenteComercial extends javax.swing.JFrame {
     public VistaAgenteComercial() {
         initComponents();
     }
+    Date fechaNacimiento = new Date(125, 4, 1);     // Año 2025, mes 5 (mayo), día 1 → 2025-05-01
+    Date fechaExpedicion = new Date(125, 4, 1);
+    AgenteComercial agenteComercial = new AgenteComercial("100","oedr","carre","Pedrogustamena"
+    ,"310",fechaNacimiento,fechaExpedicion,"cca","");
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -1426,7 +1437,28 @@ public class VistaAgenteComercial extends javax.swing.JFrame {
     private void btnMostrarRegistroClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarRegistroClienteActionPerformed
          CardLayout cardLayout = (CardLayout)
         panelDerecho.getLayout();
-        cardLayout.show(panelDerecho,"mostrarClientes");        // TODO add your handling code here:
+        cardLayout.show(panelDerecho,"mostrarClientes");// TODO add your handling code here:
+        List<Cliente> lista = agenteComercial.obtenerListaClientes();
+
+        DefaultTableModel modelo = new DefaultTableModel(
+                new Object[]{"Cédula", "Correo", "Dirección", "Nombre Completo", "Teléfono 1", "Teléfono 2", "Fecha Nacimiento", "Fecha Expedición"},
+                0 // número de filas inicialmente
+        );
+
+        for (Cliente c : lista) {
+            modelo.addRow(new Object[]{
+                    c.getCedula(),
+                    c.getCorreo(),
+                    c.getDireccion(),
+                    c.getNombreCompleto(),
+                    c.getTelefono1(),
+                    c.getTelefono2(),
+                    c.getFechaNacimiento(),
+                    c.getFechaExpediccion()
+            });
+        }
+        jTable3.setModel(modelo);
+
     }//GEN-LAST:event_btnMostrarRegistroClienteActionPerformed
 
     private void txtTelefonoFiadorRegistroContratoClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTelefonoFiadorRegistroContratoClienteActionPerformed
@@ -1524,7 +1556,29 @@ public class VistaAgenteComercial extends javax.swing.JFrame {
         CardLayout cardLayout = (CardLayout)
         panelDerecho.getLayout();
         cardLayout.show(panelDerecho,"mostrarRegistroPropietario");
-       
+
+        List<Propietario> lista = agenteComercial.obtenerListaPropietarios();
+
+        DefaultTableModel modelo = new DefaultTableModel(
+                new Object[]{"Cédula", "Correo", "Dirección", "Nombre Completo", "Teléfono 1", "Teléfono 2", "Fecha Nacimiento", "Fecha Expedición"},
+                0 // número de filas inicialmente
+        );
+
+        for (Propietario p : lista) {
+            modelo.addRow(new Object[]{
+                    p.getCedula(),
+                    p.getCorreo(),
+                    p.getDireccion(),
+                    p.getNombreCompleto(),
+                    p.getTelefono1(),
+                    p.getTelefono2(),
+                    p.getFechaNacimiento(),
+                    p.getFechaExpediccion()
+            });
+        }
+        jTable3.setModel(modelo);
+
+
     }//GEN-LAST:event_btnMostrarRegistroPropietarioActionPerformed
 
     private void txtCedulaPropiietarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCedulaPropiietarioActionPerformed
@@ -1533,6 +1587,19 @@ public class VistaAgenteComercial extends javax.swing.JFrame {
 
     private void btnGuardarRegistroPropietarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarRegistroPropietarioActionPerformed
         // TODO add your handling code here:
+
+        String cedula = txtCedulaPropiietario.getText();
+        String correo = txtCorreoElectronnicoPropietario.getText();
+        String direccion = txtDireccionPropietario.getText();
+        String nombreCompleto = txtNombreCompletoPropietario.getText();
+        String telefono1 = txtTelefono1Propietario.getText();
+        String telefono2 = txtTelefono2Propietario.getText();
+        Date fechaNacimiento = jDateFechaNacimientoPropietario.getDate();
+        Date fechaExpediccion = jDateFechaExpedicionPropietario.getDate();
+
+//        agenteComercial.registrarPropietario(cedula,correo,direccion,nombreCompleto,telefono1,telefono2,fechaNacimiento,fechaExpediccion);
+        Propietario p = new Propietario(cedula,correo,direccion,nombreCompleto,telefono1,telefono2,fechaNacimiento,fechaExpediccion);
+        agenteComercial.regisrto(p);
     }//GEN-LAST:event_btnGuardarRegistroPropietarioActionPerformed
 
     private void txtTelefono1PropietarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTelefono1PropietarioActionPerformed
