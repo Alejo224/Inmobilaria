@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Component class="javax.swing.ButtonGroup" name="buttonGrupoTipoContrato">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="buttonGrupoTipoContrato.add(jRadioVenta);&#xa;    jRadioVenta.setText(&quot;Venta&quot;);&#xa;    jRadioVenta.setActionCommand(&quot;venta&quot;); // Set actionCommand&#xa;&#xa;    buttonGrupoTipoContrato.add(jRadioAlquiler);&#xa;    jRadioAlquiler.setText(&quot;Alquiler&quot;);&#xa;    jRadioAlquiler.setActionCommand(&quot;alquiler&quot;); // Set actionCommand"/>
+      </AuxValues>
+    </Component>
+  </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
-    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[1020, 640]"/>
-    </Property>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -27,7 +31,7 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <Component id="badground" pref="1220" max="32767" attributes="0"/>
+              <Component id="badground" pref="1486" max="32767" attributes="0"/>
               <EmptySpace min="-2" pref="650" max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -283,7 +287,7 @@
                                   </Group>
                               </Group>
                           </Group>
-                          <EmptySpace pref="486" max="32767" attributes="0"/>
+                          <EmptySpace pref="483" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -714,7 +718,7 @@
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                   <SubComponents>
-                    <Component class="javax.swing.JTable" name="jTable1">
+                    <Component class="javax.swing.JTable" name="jTableContratoCliente">
                       <Properties>
                         <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                           <Table columnCount="9" rowCount="4">
@@ -789,6 +793,9 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Modificar"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnModificar1ActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="btnELeminar">
                   <Properties>
@@ -843,7 +850,7 @@
                                       </Group>
                                       <Group type="102" attributes="0">
                                           <Component id="btnModificar4" min="-2" pref="193" max="-2" attributes="0"/>
-                                          <EmptySpace min="0" pref="1" max="32767" attributes="0"/>
+                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                       </Group>
                                       <Component id="jLabel42" alignment="0" max="32767" attributes="0"/>
                                       <Group type="102" alignment="0" attributes="0">
@@ -1302,12 +1309,12 @@
                                               <Component id="jRadioVenta" min="-2" pref="98" max="-2" attributes="0"/>
                                               <Component id="jLabel32" alignment="0" min="-2" pref="121" max="-2" attributes="0"/>
                                               <Component id="jLabel44" min="-2" pref="121" max="-2" attributes="0"/>
-                                              <Component id="jComboCedulaCLiente" min="-2" max="-2" attributes="0"/>
-                                              <Component id="txtFechaExpedicion3" alignment="0" min="-2" pref="243" max="-2" attributes="0"/>
+                                              <Component id="txtValorCliente" alignment="0" min="-2" pref="243" max="-2" attributes="0"/>
                                               <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                                  <Component id="txtCedula2" alignment="0" pref="238" max="32767" attributes="0"/>
-                                                  <Component id="txtFechaExpedicion2" alignment="0" max="32767" attributes="0"/>
+                                                  <Component id="txtCodigoContrato" alignment="0" pref="238" max="32767" attributes="0"/>
+                                                  <Component id="txtDescripcion" alignment="0" max="32767" attributes="0"/>
                                               </Group>
+                                              <Component id="jComboCedulaCLiente" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace pref="83" max="32767" attributes="0"/>
                                       </Group>
@@ -1317,19 +1324,25 @@
                               </Group>
                               <Group type="102" attributes="0">
                                   <Component id="btnMostrarContratoCliente" min="-2" pref="243" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
+                                  <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+                                  <Component id="ActualizarContraCliente" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace pref="42" max="32767" attributes="0"/>
                               </Group>
                           </Group>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jDatefechaExpedicionContratoCLiente" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtNombreFiador" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jLabel31" alignment="0" min="-2" pref="124" max="-2" attributes="0"/>
-                              <Component id="jLabel28" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel36" alignment="0" min="-2" pref="182" max="-2" attributes="0"/>
-                              <Component id="txtTelefonoFiador" alignment="0" pref="232" max="32767" attributes="0"/>
-                              <Component id="jLabel35" alignment="0" min="-2" pref="129" max="-2" attributes="0"/>
-                              <Component id="jDatefechaCreacionContrato" min="-2" max="-2" attributes="0"/>
-                              <Component id="btnGuardarContratoCLiente" alignment="0" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="txtNombreFiador" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jLabel31" alignment="0" min="-2" pref="124" max="-2" attributes="0"/>
+                                  <Component id="jLabel28" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel36" alignment="0" min="-2" pref="182" max="-2" attributes="0"/>
+                                  <Component id="txtTelefonoFiador" alignment="0" pref="232" max="32767" attributes="0"/>
+                                  <Component id="jLabel35" alignment="0" min="-2" pref="129" max="-2" attributes="0"/>
+                                  <Component id="btnGuardarContratoCLiente" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jDateFechaExpedicionContratoCLiente" alignment="0" min="-2" pref="109" max="-2" attributes="0"/>
+                                  <Component id="jDateFechaCreacionContratoCliente" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="jLabel50" min="-2" pref="121" max="-2" attributes="0"/>
+                              <Component id="jComboCedulaAgente" alignment="0" min="-2" pref="106" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="441" max="-2" attributes="0"/>
                       </Group>
@@ -1360,22 +1373,26 @@
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Component id="jLabel28" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="jDatefechaCreacionContrato" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jDateFechaCreacionContratoCliente" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                                           <Component id="jLabel36" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="jDatefechaExpedicionContratoCLiente" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jDateFechaExpedicionContratoCLiente" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="jLabel50" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                                          <Component id="jComboCedulaAgente" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="jLabel37" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="txtCedula2" min="-2" pref="43" max="-2" attributes="0"/>
+                                          <Component id="txtCodigoContrato" min="-2" pref="43" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                                           <Component id="jLabel29" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="txtFechaExpedicion2" min="-2" pref="42" max="-2" attributes="0"/>
+                                          <Component id="txtDescripcion" min="-2" pref="42" max="-2" attributes="0"/>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Component id="jLabel30" min="-2" pref="25" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
@@ -1389,7 +1406,7 @@
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                           <Component id="jLabel32" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="txtFechaExpedicion3" min="-2" pref="42" max="-2" attributes="0"/>
+                                          <Component id="txtValorCliente" min="-2" pref="42" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <EmptySpace min="-2" pref="139" max="-2" attributes="0"/>
@@ -1401,6 +1418,7 @@
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="btnMostrarContratoCliente" alignment="3" min="-2" pref="59" max="-2" attributes="0"/>
                                       <Component id="btnGuardarContratoCLiente" alignment="3" min="-2" pref="62" max="-2" attributes="0"/>
+                                      <Component id="ActualizarContraCliente" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
                               </Group>
@@ -1410,9 +1428,9 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JTextField" name="txtFechaExpedicion3">
+                <Component class="javax.swing.JTextField" name="txtValorCliente">
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtFechaExpedicion3ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtValorClienteActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel32">
@@ -1423,7 +1441,7 @@
                     <Property name="text" type="java.lang.String" value="Valor"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="txtFechaExpedicion2">
+                <Component class="javax.swing.JTextField" name="txtDescripcion">
                 </Component>
                 <Component class="javax.swing.JSeparator" name="jSeparator6">
                   <Properties>
@@ -1438,9 +1456,9 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMostrarContratoClienteActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="txtCedula2">
+                <Component class="javax.swing.JTextField" name="txtCodigoContrato">
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtCedula2ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtCodigoContratoActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel28">
@@ -1486,8 +1504,14 @@
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="jRadioAlquiler">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="buttonGrupoTipoContrato"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Alquiler"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioAlquilerActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel30">
                   <Properties>
@@ -1507,8 +1531,14 @@
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="jRadioVenta">
                   <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="buttonGrupoTipoContrato"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Venta"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioVentaActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JTextField" name="txtTelefonoFiador">
                   <Events>
@@ -1559,9 +1589,37 @@
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                   </AuxValues>
                 </Component>
-                <Component class="com.toedter.calendar.JDateChooser" name="jDatefechaCreacionContrato">
+                <Component class="com.toedter.calendar.JDateChooser" name="jDateFechaCreacionContratoCliente">
                 </Component>
-                <Component class="com.toedter.calendar.JDateChooser" name="jDatefechaExpedicionContratoCLiente">
+                <Component class="com.toedter.calendar.JDateChooser" name="jDateFechaExpedicionContratoCLiente">
+                </Component>
+                <Component class="javax.swing.JComboBox" name="jComboCedulaAgente">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="Item 1"/>
+                        <StringItem index="1" value="Item 2"/>
+                        <StringItem index="2" value="Item 3"/>
+                        <StringItem index="3" value="Item 4"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel50">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Segoe UI" size="12" style="1"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="cedula agente"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JButton" name="ActualizarContraCliente">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Acualizar"/>
+                  </Properties>
                 </Component>
               </SubComponents>
             </Container>
@@ -1591,20 +1649,20 @@
                                   <Component id="btnEleminarContratoCliente" min="-2" pref="128" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="92" max="-2" attributes="0"/>
-                                  <Component id="jScrollPane3" min="-2" pref="583" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
+                                  <Component id="jScrollPane5" min="-2" pref="722" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="545" max="32767" attributes="0"/>
+                          <EmptySpace pref="429" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
-                          <Component id="jScrollPane3" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="41" max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
+                          <Component id="jScrollPane5" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="40" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="btnAtrasContratoCliente" alignment="3" min="-2" pref="74" max="-2" attributes="0"/>
                               <Component id="btnModificarContratoCLiente" alignment="3" min="-2" pref="74" max="-2" attributes="0"/>
@@ -1616,88 +1674,13 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Container class="javax.swing.JScrollPane" name="jScrollPane3">
-                  <AuxValues>
-                    <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-                  </AuxValues>
-
-                  <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-                  <SubComponents>
-                    <Component class="javax.swing.JTable" name="tablaMostarContratosCLientes">
-                      <Properties>
-                        <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                          <Table columnCount="9" rowCount="4">
-                            <Column editable="true" title="Codigo" type="java.lang.Object"/>
-                            <Column editable="true" title="Descipcion" type="java.lang.Object"/>
-                            <Column editable="true" title="Tipo contrato" type="java.lang.Object"/>
-                            <Column editable="true" title="Cedula cliente" type="java.lang.Object"/>
-                            <Column editable="true" title="Valor" type="java.lang.Object"/>
-                            <Column editable="true" title="Nombre del fiador" type="java.lang.Object"/>
-                            <Column editable="true" title="Telefono fiador" type="java.lang.Object"/>
-                            <Column editable="true" title="Fecha creacion contrato" type="java.lang.Object"/>
-                            <Column editable="true" title="Fecha Expedicion contrato" type="java.lang.Object"/>
-                          </Table>
-                        </Property>
-                        <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
-                          <TableColumnModel selectionModel="0">
-                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                              <Title/>
-                              <Editor/>
-                              <Renderer/>
-                            </Column>
-                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                              <Title/>
-                              <Editor/>
-                              <Renderer/>
-                            </Column>
-                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                              <Title/>
-                              <Editor/>
-                              <Renderer/>
-                            </Column>
-                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                              <Title/>
-                              <Editor/>
-                              <Renderer/>
-                            </Column>
-                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                              <Title/>
-                              <Editor/>
-                              <Renderer/>
-                            </Column>
-                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                              <Title/>
-                              <Editor/>
-                              <Renderer/>
-                            </Column>
-                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                              <Title/>
-                              <Editor/>
-                              <Renderer/>
-                            </Column>
-                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                              <Title/>
-                              <Editor/>
-                              <Renderer/>
-                            </Column>
-                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                              <Title/>
-                              <Editor/>
-                              <Renderer/>
-                            </Column>
-                          </TableColumnModel>
-                        </Property>
-                        <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
-                          <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
-                        </Property>
-                      </Properties>
-                    </Component>
-                  </SubComponents>
-                </Container>
                 <Component class="javax.swing.JButton" name="btnModificarContratoCLiente">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="MODIFICAR"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnModificarContratoCLienteActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="btnEleminarContratoCliente">
                   <Properties>
@@ -1712,6 +1695,27 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAtrasContratoClienteActionPerformed"/>
                   </Events>
                 </Component>
+                <Container class="javax.swing.JScrollPane" name="jScrollPane5">
+                  <AuxValues>
+                    <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                  </AuxValues>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                  <SubComponents>
+                    <Component class="javax.swing.JTable" name="tablaMostarContratosCLientes">
+                      <Properties>
+                        <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                          <Table columnCount="4" rowCount="4">
+                            <Column editable="true" title="Title 1" type="java.lang.Object"/>
+                            <Column editable="true" title="Title 2" type="java.lang.Object"/>
+                            <Column editable="true" title="Title 3" type="java.lang.Object"/>
+                            <Column editable="true" title="Title 4" type="java.lang.Object"/>
+                          </Table>
+                        </Property>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
               </SubComponents>
             </Container>
             <Container class="javax.swing.JPanel" name="mostrarRegistroPropietario">
@@ -1997,7 +2001,6 @@
                                   <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace max="32767" attributes="0"/>
                                   <Component id="txtCedulaPropiietario" min="-2" pref="43" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Component id="jLabel19" min="-2" max="-2" attributes="0"/>

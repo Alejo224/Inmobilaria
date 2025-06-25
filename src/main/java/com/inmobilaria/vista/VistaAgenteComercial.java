@@ -5,7 +5,14 @@
 //package vistas;
 package com.inmobilaria.vista;
 
+import com.inmobilaria.modelo.AgenteComercial;
+import com.inmobilaria.modelo.Cliente;
+import com.inmobilaria.modelo.Contrato;
+import com.inmobilaria.modelo.ContratoCliente;
+import com.toedter.calendar.JDateChooser;
+
 import java.awt.CardLayout;
+import javax.swing.JTable;
 
 /**
  *
@@ -16,8 +23,22 @@ public class VistaAgenteComercial extends javax.swing.JFrame {
     /**
      * Creates new form VistaAgenteComercial
      */
+    private Cliente cliente;
+    private AgenteComercial agenteComercial;
+    private Contrato contrato;
+    private ContratoCliente contratoClienteClase;
+    
     public VistaAgenteComercial() {
+        contratoClienteClase = new ContratoCliente();
+        cliente = new Cliente();        
+        agenteComercial = new AgenteComercial();
+        contrato = new Contrato();
         initComponents();
+        cliente.listarCedulas(jComboCedulaCLiente);
+        agenteComercial.cargarCedulasAgentes(jComboCedulaAgente);
+        contratoClienteClase.mostrar(jTableContratoCliente);
+        //contratoClienteClase.mostrar(jTableContratoCliente);
+        //cliente.mostrar(jtablaCliente);
     }
 
     /**
@@ -29,6 +50,7 @@ public class VistaAgenteComercial extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGrupoTipoContrato = new javax.swing.ButtonGroup();
         badground = new javax.swing.JPanel();
         Menu = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -72,7 +94,7 @@ public class VistaAgenteComercial extends javax.swing.JFrame {
         btnGuardar1 = new javax.swing.JButton();
         mostrarClientes = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        jTableContratoCliente = new javax.swing.JTable();
         btnModificar1 = new javax.swing.JButton();
         btnELeminar = new javax.swing.JButton();
         btnAtras = new javax.swing.JButton();
@@ -108,12 +130,12 @@ public class VistaAgenteComercial extends javax.swing.JFrame {
         btnEleminarContratoPropietario = new javax.swing.JButton();
         btnAtrasCP = new javax.swing.JButton();
         contratoCliente = new javax.swing.JPanel();
-        txtFechaExpedicion3 = new javax.swing.JTextField();
+        txtValorCliente = new javax.swing.JTextField();
         jLabel32 = new javax.swing.JLabel();
-        txtFechaExpedicion2 = new javax.swing.JTextField();
+        txtDescripcion = new javax.swing.JTextField();
         jSeparator6 = new javax.swing.JSeparator();
         btnMostrarContratoCliente = new javax.swing.JButton();
-        txtCedula2 = new javax.swing.JTextField();
+        txtCodigoContrato = new javax.swing.JTextField();
         jLabel28 = new javax.swing.JLabel();
         btnGuardarContratoCLiente = new javax.swing.JButton();
         jLabel37 = new javax.swing.JLabel();
@@ -129,14 +151,17 @@ public class VistaAgenteComercial extends javax.swing.JFrame {
         txtNombreFiador = new javax.swing.JTextField();
         jLabel44 = new javax.swing.JLabel();
         jComboCedulaCLiente = new javax.swing.JComboBox<>();
-        jDatefechaCreacionContrato = new com.toedter.calendar.JDateChooser();
-        jDatefechaExpedicionContratoCLiente = new com.toedter.calendar.JDateChooser();
+        jDateFechaCreacionContratoCliente = new com.toedter.calendar.JDateChooser();
+        jDateFechaExpedicionContratoCLiente = new com.toedter.calendar.JDateChooser();
+        jComboCedulaAgente = new javax.swing.JComboBox<>();
+        jLabel50 = new javax.swing.JLabel();
+        ActualizarContraCliente = new javax.swing.JButton();
         mostrarContratosCLientes = new javax.swing.JPanel();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        tablaMostarContratosCLientes = new javax.swing.JTable();
         btnModificarContratoCLiente = new javax.swing.JButton();
         btnEleminarContratoCliente = new javax.swing.JButton();
         btnAtrasContratoCliente = new javax.swing.JButton();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        tablaMostarContratosCLientes = new javax.swing.JTable();
         mostrarRegistroPropietario = new javax.swing.JPanel();
         jScrollPane4 = new javax.swing.JScrollPane();
         jTable3 = new javax.swing.JTable();
@@ -174,8 +199,15 @@ public class VistaAgenteComercial extends javax.swing.JFrame {
         jDateFechaExpedicionPropietario = new com.toedter.calendar.JDateChooser();
         jLabel49 = new javax.swing.JLabel();
 
+        buttonGrupoTipoContrato.add(jRadioVenta);
+        jRadioVenta.setText("Venta");
+        jRadioVenta.setActionCommand("venta"); // Set actionCommand
+
+        buttonGrupoTipoContrato.add(jRadioAlquiler);
+        jRadioAlquiler.setText("Alquiler");
+        jRadioAlquiler.setActionCommand("alquiler"); // Set actionCommand
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1020, 640));
 
         badground.setBackground(new java.awt.Color(255, 255, 255));
         badground.setPreferredSize(new java.awt.Dimension(1220, 640));
@@ -327,7 +359,7 @@ public class VistaAgenteComercial extends javax.swing.JFrame {
                             .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 543, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 543, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel5))))
-                .addContainerGap(486, Short.MAX_VALUE))
+                .addContainerGap(483, Short.MAX_VALUE))
         );
         vistaPrincipalLayout.setVerticalGroup(
             vistaPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -549,7 +581,7 @@ public class VistaAgenteComercial extends javax.swing.JFrame {
         mostrarClientes.setMaximumSize(null);
         mostrarClientes.setPreferredSize(new java.awt.Dimension(1220, 640));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        jTableContratoCliente.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null, null, null},
@@ -560,9 +592,14 @@ public class VistaAgenteComercial extends javax.swing.JFrame {
                 "Cedula", "Fecha de  Expedicion", "Primer  Nombre", "Segundo Nombre", "Primer Apellido", "Segundo Apellido", "Correo", "Telefono 1", "Telefono 2"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(jTableContratoCliente);
 
         btnModificar1.setText("Modificar");
+        btnModificar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnModificar1ActionPerformed(evt);
+            }
+        });
 
         btnELeminar.setText("ELiminar");
 
@@ -705,7 +742,7 @@ public class VistaAgenteComercial extends javax.swing.JFrame {
                                 .addGap(128, 128, 128))
                             .addGroup(contratoPropietarioLayout.createSequentialGroup()
                                 .addComponent(btnModificar4, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 1, Short.MAX_VALUE))
+                                .addGap(0, 0, Short.MAX_VALUE))
                             .addComponent(jLabel42, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(contratoPropietarioLayout.createSequentialGroup()
                                 .addGap(1, 1, 1)
@@ -864,9 +901,9 @@ public class VistaAgenteComercial extends javax.swing.JFrame {
         contratoCliente.setMinimumSize(new java.awt.Dimension(1220, 640));
         contratoCliente.setPreferredSize(new java.awt.Dimension(1220, 640));
 
-        txtFechaExpedicion3.addActionListener(new java.awt.event.ActionListener() {
+        txtValorCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtFechaExpedicion3ActionPerformed(evt);
+                txtValorClienteActionPerformed(evt);
             }
         });
 
@@ -882,9 +919,9 @@ public class VistaAgenteComercial extends javax.swing.JFrame {
             }
         });
 
-        txtCedula2.addActionListener(new java.awt.event.ActionListener() {
+        txtCodigoContrato.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtCedula2ActionPerformed(evt);
+                txtCodigoContratoActionPerformed(evt);
             }
         });
 
@@ -908,7 +945,13 @@ public class VistaAgenteComercial extends javax.swing.JFrame {
         jLabel34.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel34.setText("REGISTRO CONTRATO CLIENTE");
 
+        buttonGrupoTipoContrato.add(jRadioAlquiler);
         jRadioAlquiler.setText("Alquiler");
+        jRadioAlquiler.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioAlquilerActionPerformed(evt);
+            }
+        });
 
         jLabel30.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel30.setText("Tipo de contrato");
@@ -916,7 +959,13 @@ public class VistaAgenteComercial extends javax.swing.JFrame {
         jLabel35.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel35.setText("Telefono del Fiador");
 
+        buttonGrupoTipoContrato.add(jRadioVenta);
         jRadioVenta.setText("Venta");
+        jRadioVenta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioVentaActionPerformed(evt);
+            }
+        });
 
         txtTelefonoFiador.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -941,6 +990,13 @@ public class VistaAgenteComercial extends javax.swing.JFrame {
 
         jComboCedulaCLiente.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
+        jComboCedulaAgente.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jLabel50.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel50.setText("cedula agente");
+
+        ActualizarContraCliente.setText("Acualizar");
+
         javax.swing.GroupLayout contratoClienteLayout = new javax.swing.GroupLayout(contratoCliente);
         contratoCliente.setLayout(contratoClienteLayout);
         contratoClienteLayout.setHorizontalGroup(
@@ -962,27 +1018,32 @@ public class VistaAgenteComercial extends javax.swing.JFrame {
                                     .addComponent(jRadioVenta, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel44, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jComboCedulaCLiente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtFechaExpedicion3, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtValorCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(contratoClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addComponent(txtCedula2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 238, Short.MAX_VALUE)
-                                        .addComponent(txtFechaExpedicion2, javax.swing.GroupLayout.Alignment.LEADING)))
+                                        .addComponent(txtCodigoContrato, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 238, Short.MAX_VALUE)
+                                        .addComponent(txtDescripcion, javax.swing.GroupLayout.Alignment.LEADING))
+                                    .addComponent(jComboCedulaCLiente, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 83, Short.MAX_VALUE)))
                         .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(64, 64, 64))
                     .addGroup(contratoClienteLayout.createSequentialGroup()
                         .addComponent(btnMostrarContratoCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addGroup(contratoClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jDatefechaExpedicionContratoCLiente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtNombreFiador)
-                    .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel28)
-                    .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtTelefonoFiador, javax.swing.GroupLayout.DEFAULT_SIZE, 232, Short.MAX_VALUE)
-                    .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jDatefechaCreacionContrato, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnGuardarContratoCLiente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(44, 44, 44)
+                        .addComponent(ActualizarContraCliente)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)))
+                .addGroup(contratoClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(contratoClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(txtNombreFiador)
+                        .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel28)
+                        .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtTelefonoFiador, javax.swing.GroupLayout.DEFAULT_SIZE, 232, Short.MAX_VALUE)
+                        .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnGuardarContratoCLiente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jDateFechaExpedicionContratoCLiente, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jDateFechaCreacionContratoCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel50, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboCedulaAgente, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(441, 441, 441))
             .addGroup(contratoClienteLayout.createSequentialGroup()
                 .addGap(203, 203, 203)
@@ -1009,21 +1070,25 @@ public class VistaAgenteComercial extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(jLabel28)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jDatefechaCreacionContrato, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jDateFechaCreacionContratoCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(41, 41, 41)
                                 .addComponent(jLabel36)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jDatefechaExpedicionContratoCLiente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jDateFechaExpedicionContratoCLiente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel50)
+                                .addGap(30, 30, 30)
+                                .addComponent(jComboCedulaAgente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(contratoClienteLayout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel37)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(txtCedula2, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtCodigoContrato, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(41, 41, 41)
                                 .addComponent(jLabel29)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtFechaExpedicion2, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(jLabel30, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1037,7 +1102,7 @@ public class VistaAgenteComercial extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jLabel32)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(txtFechaExpedicion3, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(txtValorCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(139, 139, 139))
                     .addGroup(contratoClienteLayout.createSequentialGroup()
                         .addGap(41, 41, 41)
@@ -1045,7 +1110,8 @@ public class VistaAgenteComercial extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(contratoClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btnMostrarContratoCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnGuardarContratoCLiente, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(btnGuardarContratoCLiente, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ActualizarContraCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(44, 44, 44))))
         );
 
@@ -1053,20 +1119,12 @@ public class VistaAgenteComercial extends javax.swing.JFrame {
 
         mostrarContratosCLientes.setMinimumSize(new java.awt.Dimension(1220, 640));
 
-        tablaMostarContratosCLientes.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null}
-            },
-            new String [] {
-                "Codigo", "Descipcion", "Tipo contrato", "Cedula cliente", "Valor", "Nombre del fiador", "Telefono fiador", "Fecha creacion contrato", "Fecha Expedicion contrato"
-            }
-        ));
-        jScrollPane3.setViewportView(tablaMostarContratosCLientes);
-
         btnModificarContratoCLiente.setText("MODIFICAR");
+        btnModificarContratoCLiente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnModificarContratoCLienteActionPerformed(evt);
+            }
+        });
 
         btnEleminarContratoCliente.setText("ELEMINAR");
 
@@ -1076,6 +1134,19 @@ public class VistaAgenteComercial extends javax.swing.JFrame {
                 btnAtrasContratoClienteActionPerformed(evt);
             }
         });
+
+        tablaMostarContratosCLientes.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane5.setViewportView(tablaMostarContratosCLientes);
 
         javax.swing.GroupLayout mostrarContratosCLientesLayout = new javax.swing.GroupLayout(mostrarContratosCLientes);
         mostrarContratosCLientes.setLayout(mostrarContratosCLientesLayout);
@@ -1091,16 +1162,16 @@ public class VistaAgenteComercial extends javax.swing.JFrame {
                         .addGap(56, 56, 56)
                         .addComponent(btnEleminarContratoCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(mostrarContratosCLientesLayout.createSequentialGroup()
-                        .addGap(92, 92, 92)
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 583, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(545, Short.MAX_VALUE))
+                        .addGap(69, 69, 69)
+                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 722, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(429, Short.MAX_VALUE))
         );
         mostrarContratosCLientesLayout.setVerticalGroup(
             mostrarContratosCLientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(mostrarContratosCLientesLayout.createSequentialGroup()
-                .addGap(61, 61, 61)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
+                .addGap(62, 62, 62)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
                 .addGroup(mostrarContratosCLientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAtrasContratoCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnModificarContratoCLiente, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1366,7 +1437,6 @@ public class VistaAgenteComercial extends javax.swing.JFrame {
                             .addComponent(btnMostrarRegistroPropietario, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(56, 56, 56))
                     .addGroup(registroPropietarioLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(txtCedulaPropiietario, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel19)
@@ -1424,7 +1494,7 @@ public class VistaAgenteComercial extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(badground, javax.swing.GroupLayout.DEFAULT_SIZE, 1220, Short.MAX_VALUE)
+                .addComponent(badground, javax.swing.GroupLayout.DEFAULT_SIZE, 1486, Short.MAX_VALUE)
                 .addGap(650, 650, 650))
         );
         layout.setVerticalGroup(
@@ -1490,6 +1560,10 @@ public class VistaAgenteComercial extends javax.swing.JFrame {
     private void btnGuardar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardar1ActionPerformed
          CardLayout cardLayout = (CardLayout)
         panelDerecho.getLayout();
+        if (cliente == null ){
+            cliente = new Cliente();
+        }
+        cliente.mostrar(jTableContratoCliente);
         cardLayout.show(panelDerecho,"mostrarClientes");        // TODO add your handling code here:
     }//GEN-LAST:event_btnGuardar1ActionPerformed
 
@@ -1502,18 +1576,66 @@ public class VistaAgenteComercial extends javax.swing.JFrame {
     }//GEN-LAST:event_txtNombreFiadorActionPerformed
 
     private void btnMostrarContratoClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarContratoClienteActionPerformed
-          CardLayout cardLayout = (CardLayout)
-        panelDerecho.getLayout();
-        cardLayout.show(panelDerecho,"MostrarContratoClientes");        // TODO add your handling code here:
+          CardLayout cardLayout = (CardLayout) panelDerecho.getLayout();
+    System.out.println("Boton mostrar"); // Verifica que el botón funciona
+
+    if (contratoClienteClase == null){
+        contratoClienteClase = new ContratoCliente();
+    }
+    System.out.println("Antes de llamar mostrar");
+    contratoClienteClase.mostrar(getjTableContratoCliente());
+    System.out.println("Después de llamar mostrar");
+
+    cardLayout.show(panelDerecho, "MostrarContratoClientes");
+    panelDerecho.revalidate();
+    panelDerecho.repaint();
     }//GEN-LAST:event_btnMostrarContratoClienteActionPerformed
 
     private void btnGuardarContratoCLienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarContratoCLienteActionPerformed
         // TODO add your handling code here:
+        System.out.println("boton guardar contrato");
+        if (contrato == null){
+            contrato = new Contrato();
+        }
+        contrato.crearContratoCliente(txtCodigoContrato, txtDescripcion, buttonGrupoTipoContrato, jDateFechaCreacionContratoCliente,
+                jDateFechaExpedicionContratoCLiente, jComboCedulaAgente, jComboCedulaCLiente, txtNombreFiador,
+                txtValorCliente, txtTelefonoFiador);
+        System.out.println("se ha enviado a la tabla contrato");
+        limpiarCamposContrato();
+       
+        
     }//GEN-LAST:event_btnGuardarContratoCLienteActionPerformed
 
-    private void txtCedula2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCedula2ActionPerformed
+    //metodo limpiar bufer
+    public void limpiarCamposContrato() {
+    // Limpiar JTextField
+        txtCodigoContrato.setText("");
+        txtDescripcion.setText("");
+        txtNombreFiador.setText("");
+        txtValorCliente.setText("");
+
+        // Limpiar ButtonGroup (des-seleccionar todos los botones)
+        buttonGrupoTipoContrato.clearSelection();
+
+        // Limpiar JDateChooser (poner a null)
+        jDateFechaCreacionContratoCliente.setDate(null);
+        jDateFechaExpedicionContratoCLiente.setDate(null);
+
+        // Limpiar JComboBox (seleccionar el primer elemento, si existe)
+        if (jComboCedulaAgente.getItemCount() > 0) {
+            jComboCedulaAgente.setSelectedIndex(0);
+        }
+        if (jComboCedulaCLiente.getItemCount() > 0) {
+            jComboCedulaCLiente.setSelectedIndex(0);
+        }
+    }
+    public void limpiarFormulario(){
+        
+    }
+    
+    private void txtCodigoContratoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCodigoContratoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtCedula2ActionPerformed
+    }//GEN-LAST:event_txtCodigoContratoActionPerformed
 
     private void txtPrimerApellido3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPrimerApellido3ActionPerformed
         // TODO add your handling code here:
@@ -1567,9 +1689,9 @@ public class VistaAgenteComercial extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnAtrasCPActionPerformed
 
-    private void txtFechaExpedicion3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFechaExpedicion3ActionPerformed
+    private void txtValorClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtValorClienteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtFechaExpedicion3ActionPerformed
+    }//GEN-LAST:event_txtValorClienteActionPerformed
 
     private void txtTelefono2PropietarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTelefono2PropietarioActionPerformed
         // TODO add your handling code here:
@@ -1583,6 +1705,10 @@ public class VistaAgenteComercial extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtPrimerApellidoPropietarioActionPerformed
 
+    public JTable getjTableContratoCliente() {
+        return jTableContratoCliente;
+    }
+    
     private void txtSegundoApellidoPropietarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSegundoApellidoPropietarioActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtSegundoApellidoPropietarioActionPerformed
@@ -1625,6 +1751,49 @@ public class VistaAgenteComercial extends javax.swing.JFrame {
         cardLayout.show(panelDerecho,"registroPropietario");
     }//GEN-LAST:event_btnAtrasPropietarioActionPerformed
 
+    private void jRadioVentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioVentaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioVentaActionPerformed
+
+    private void jRadioAlquilerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioAlquilerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioAlquilerActionPerformed
+
+    private void btnModificar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificar1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnModificar1ActionPerformed
+
+    private void btnModificarContratoCLienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarContratoCLienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnModificarContratoCLienteActionPerformed
+
+    public JDateChooser getjDateFechaCreacionContrato() {
+        return jDateFechaCreacionContrato;
+    }
+
+    public JDateChooser getjDateFechaExpedicionPropietario() {
+        return jDateFechaExpedicionPropietario;
+    }
+
+    public JDateChooser getjDateFechaExpiracionContrato() {
+        return jDateFechaExpiracionContrato;
+    }
+
+    public JDateChooser getjDateFechaNacimientoPropietario() {
+        return jDateFechaNacimientoPropietario;
+    }
+
+    public JDateChooser getjDatefechaCreacionContrato() {
+        return jDateFechaCreacionContratoCliente;
+    }
+
+    public JDateChooser getjDatefechaExpedicionContratoCLiente() {
+        return jDateFechaExpedicionContratoCLiente;
+    }
+
+    
+    
+    
     /**
      * @param args the command line arguments
      */
@@ -1661,6 +1830,7 @@ public class VistaAgenteComercial extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton ActualizarContraCliente;
     private javax.swing.JPanel Menu;
     private javax.swing.JPanel badground;
     private javax.swing.JButton btnAtras;
@@ -1690,16 +1860,18 @@ public class VistaAgenteComercial extends javax.swing.JFrame {
     private javax.swing.JButton btnMostrarRegistroPropietario;
     private javax.swing.JButton btnRegistroCliente;
     private javax.swing.JButton btnRegistroPropietario;
+    private javax.swing.ButtonGroup buttonGrupoTipoContrato;
     private javax.swing.JPanel contratoCliente;
     private javax.swing.JPanel contratoPropietario;
     private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> jComboCedulaAgente;
     private javax.swing.JComboBox<String> jComboCedulaCLiente;
     private com.toedter.calendar.JDateChooser jDateFechaCreacionContrato;
+    private com.toedter.calendar.JDateChooser jDateFechaCreacionContratoCliente;
+    private com.toedter.calendar.JDateChooser jDateFechaExpedicionContratoCLiente;
     private com.toedter.calendar.JDateChooser jDateFechaExpedicionPropietario;
     private com.toedter.calendar.JDateChooser jDateFechaExpiracionContrato;
     private com.toedter.calendar.JDateChooser jDateFechaNacimientoPropietario;
-    private com.toedter.calendar.JDateChooser jDatefechaCreacionContrato;
-    private com.toedter.calendar.JDateChooser jDatefechaExpedicionContratoCLiente;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1745,6 +1917,7 @@ public class VistaAgenteComercial extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel48;
     private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel50;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
@@ -1755,8 +1928,8 @@ public class VistaAgenteComercial extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioVenta1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
@@ -1765,9 +1938,9 @@ public class VistaAgenteComercial extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator6;
     private javax.swing.JSeparator jSeparator7;
     private javax.swing.JSeparator jSeparator8;
-    private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
+    private javax.swing.JTable jTableContratoCliente;
     private javax.swing.JPanel mostrarClientes;
     private javax.swing.JPanel mostrarContratosCLientes;
     private javax.swing.JPanel mostrarContratosPropietarios;
@@ -1777,16 +1950,15 @@ public class VistaAgenteComercial extends javax.swing.JFrame {
     private javax.swing.JPanel registroPropietario;
     private javax.swing.JTable tablaMostarContratosCLientes;
     private javax.swing.JTextField txtCedula;
-    private javax.swing.JTextField txtCedula2;
     private javax.swing.JTextField txtCedula3;
     private javax.swing.JTextField txtCedulaPropiietario;
+    private javax.swing.JTextField txtCodigoContrato;
     private javax.swing.JTextField txtCorreoElectronnico;
     private javax.swing.JTextField txtCorreoElectronnicoPropietario;
+    private javax.swing.JTextField txtDescripcion;
     private javax.swing.JTextField txtDireccionPropietario;
     private javax.swing.JTextField txtFechaExpedicion;
     private javax.swing.JTextField txtFechaExpedicion1;
-    private javax.swing.JTextField txtFechaExpedicion2;
-    private javax.swing.JTextField txtFechaExpedicion3;
     private javax.swing.JTextField txtFechaExpedicion4;
     private javax.swing.JTextField txtFechaExpedicion5;
     private javax.swing.JTextField txtNombreFiador;
@@ -1804,6 +1976,7 @@ public class VistaAgenteComercial extends javax.swing.JFrame {
     private javax.swing.JTextField txtTelefono2Propietario;
     private javax.swing.JTextField txtTelefono5;
     private javax.swing.JTextField txtTelefonoFiador;
+    private javax.swing.JTextField txtValorCliente;
     private javax.swing.JPanel vistaPrincipal;
     // End of variables declaration//GEN-END:variables
 }
